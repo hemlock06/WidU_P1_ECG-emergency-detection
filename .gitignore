@@ -17,6 +17,7 @@ fairseq-signals/
 # Environment
 conda_envs/
 .venv/
+.venv-hsic-demo/  # HSIC 카드D 재구현 전용 경량 venv (2026-07-23) — P1 GPU 파이프라인과 분리
 __pycache__/
 *.py[cod]
 *.pyc
