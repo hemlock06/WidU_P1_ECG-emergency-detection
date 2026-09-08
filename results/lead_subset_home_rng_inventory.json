@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "FullName": "D:\\WidU_ecg-fm_emergency-detection_git\\outputs\\lora_multitask_snr_a07\\lora_multitask_snr_best.pt",
+      "Length": 364840844,
+      "LastWriteTime": "/Date(1779997212070)/"
+    },
+    {
+      "FullName": "D:\\WidU_ecg-fm_emergency-detection_git\\outputs\\lora_multitask_snr_a07\\test_results.npz",
+      "Length": 40284,
+      "LastWriteTime": "/Date(1779998276982)/"
+    },
+    {
+      "FullName": "D:\\WidU_ecg-fm_emergency-detection_git\\outputs\\lora_multisnr\\lora_multisnr_best.pt",
+      "Length": 1200146,
+      "LastWriteTime": "/Date(1779693309466)/"
+    }
+  ],
+  "hashes": []
+}

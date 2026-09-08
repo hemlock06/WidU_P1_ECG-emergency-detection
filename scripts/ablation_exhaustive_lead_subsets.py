@@ -215,12 +215,24 @@ def data_for(name):
     return x, ids, labels, None
 
 
+def load_backbone_state(bb, state, adapter_only=False):
+    if not adapter_only:
+        return bb.load_state_dict(state, strict=True)
+    expected = {k for k in bb.state_dict() if "lora_" in k}
+    if set(state) != expected:
+        raise ValueError("Reference checkpoint must contain every LoRA tensor only")
+    # The reference training script stores adapters only; frozen weights came from HF.
+    return bb.load_state_dict(state, strict=False)
+
+
 def model_for(name):
     # Local hashes identify the explicitly restored, trusted model files.
     checkpoint = torch.load(MODELS[name][0], map_location="cpu", weights_only=False)
     bb = load_ecgfm(torch.device("cpu"))
     inject_lora(bb, rank=8, alpha=16.0, dropout=0.0)
-    bb.load_state_dict(checkpoint["backbone_lora"], strict=True)
+    load_backbone_state(
+        bb, checkpoint["backbone_lora"], adapter_only=name == "reference_iii"
+    )
     hb = BinaryHead()
     hb.load_state_dict(
         checkpoint["head_bin_state" if name == "P1_a07" else "head_state"]

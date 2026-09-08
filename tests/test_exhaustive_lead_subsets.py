@@ -108,3 +108,22 @@ def test_prediction_resets_feature_mask_rng_for_resume(monkeypatch):
     for a, b in zip(first, repeated):
         np.testing.assert_array_equal(a, b)
     assert not np.array_equal(first[1], changed[1])
+
+
+def test_adapter_only_load_preserves_frozen_weights_and_rejects_missing_adapter():
+    from ablation_nlead_curve import LoRALinear
+
+    model = LoRALinear(torch.nn.Linear(3, 2), rank=1, alpha=2)
+    frozen = model.original.weight.detach().clone()
+    adapters = {
+        k: torch.ones_like(v) for k, v in model.state_dict().items() if "lora_" in k
+    }
+    experiment.load_backbone_state(model, adapters, adapter_only=True)
+    torch.testing.assert_close(model.original.weight, frozen)
+    assert torch.all(model.lora_B.weight == 1)
+    with pytest.raises(ValueError, match="every LoRA"):
+        experiment.load_backbone_state(
+            model, {"lora_A.weight": adapters["lora_A.weight"]}, adapter_only=True
+        )
+    with pytest.raises(RuntimeError):
+        experiment.load_backbone_state(model, adapters, adapter_only=False)

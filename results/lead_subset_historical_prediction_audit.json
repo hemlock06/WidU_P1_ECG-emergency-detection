@@ -1,0 +1,170 @@
+{
+  "transfer": {
+    "file": "D:\\WidU_ecg-fm_emergency-detection_git\\outputs\\lora_multitask_snr_a07\\test_results.npz",
+    "sha256": "298e7771660dc25fdc89c3f676954ba123fe2549168148160105e1a18ba6b989",
+    "bytes": 40284
+  },
+  "copy_sha256": "298e7771660dc25fdc89c3f676954ba123fe2549168148160105e1a18ba6b989",
+  "arrays": {
+    "bin_labels": {
+      "shape": [
+        936
+      ],
+      "dtype": "int32"
+    },
+    "bin_probs": {
+      "shape": [
+        936
+      ],
+      "dtype": "float32"
+    },
+    "mc_labels": {
+      "shape": [
+        936
+      ],
+      "dtype": "int32"
+    },
+    "mc_preds": {
+      "shape": [
+        936
+      ],
+      "dtype": "int64"
+    },
+    "mc_probs": {
+      "shape": [
+        936,
+        5
+      ],
+      "dtype": "float32"
+    },
+    "bin_auroc": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "bin_f1": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "bin_sens": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "macro_f1": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "weighted_f1": {
+      "shape": [],
+      "dtype": "float64"
+    },
+    "per_auroc": {
+      "shape": [
+        5
+      ],
+      "dtype": "float64"
+    }
+  },
+  "labels_match_restored_test_in_order": true,
+  "record_ids_in_historical_npz": false,
+  "recomputed_metrics": {
+    "binary_auroc": 0.9138919541921087,
+    "sens_at_95sp": 0.7072463768115942,
+    "f1_at_05": 0.7887323943661971,
+    "macro_f1": 0.6857970099613185,
+    "macro_sensitivity": 0.6924720455481765,
+    "measurable": "binary;multiclass",
+    "auroc_nsr": 0.9303970223325062,
+    "f1_nsr": 0.6158940397350994,
+    "sensitivity_nsr": 0.7153846153846154,
+    "sens95_nsr": 0.5461538461538461,
+    "auroc_af": 0.9670708406819517,
+    "f1_af": 0.8994413407821229,
+    "sensitivity_af": 0.8944444444444445,
+    "sens95_af": 0.9055555555555556,
+    "auroc_ischemia": 0.9066305074087175,
+    "f1_ischemia": 0.6687306501547987,
+    "sensitivity_ischemia": 0.6545454545454545,
+    "sens95_ischemia": 0.6121212121212121,
+    "auroc_conduction": 0.9576510044859619,
+    "f1_conduction": 0.8731241473396999,
+    "sensitivity_conduction": 0.8443271767810027,
+    "sens95_conduction": 0.8258575197889182,
+    "auroc_ectopy": 0.8633546581367453,
+    "f1_ectopy": 0.3717948717948718,
+    "sensitivity_ectopy": 0.35365853658536583,
+    "sens95_ectopy": 0.32926829268292684
+  },
+  "historical_checks": {
+    "status": "passed",
+    "checks": {
+      "binary_auroc": {
+        "expected": 0.9139,
+        "observed": 0.9138919541921087,
+        "tolerance": 0.0021,
+        "passed": true
+      },
+      "sens_at_95sp": {
+        "expected": 0.7072,
+        "observed": 0.7072463768115942,
+        "tolerance": 0.02,
+        "passed": true
+      },
+      "f1_at_05": {
+        "expected": 0.7887,
+        "observed": 0.7887323943661971,
+        "tolerance": 0.005,
+        "passed": true
+      },
+      "macro_f1": {
+        "expected": 0.6858,
+        "observed": 0.6857970099613185,
+        "tolerance": 0.005,
+        "passed": true
+      },
+      "auroc_nsr": {
+        "expected": 0.9304,
+        "observed": 0.9303970223325062,
+        "tolerance": 0.0021,
+        "passed": true
+      },
+      "auroc_af": {
+        "expected": 0.9671,
+        "observed": 0.9670708406819517,
+        "tolerance": 0.0021,
+        "passed": true
+      },
+      "auroc_ischemia": {
+        "expected": 0.9066,
+        "observed": 0.9066305074087175,
+        "tolerance": 0.0021,
+        "passed": true
+      },
+      "auroc_conduction": {
+        "expected": 0.9577,
+        "observed": 0.9576510044859619,
+        "tolerance": 0.0021,
+        "passed": true
+      },
+      "auroc_ectopy": {
+        "expected": 0.8634,
+        "observed": 0.8633546581367453,
+        "tolerance": 0.0021,
+        "passed": true
+      }
+    }
+  },
+  "stored_metrics": {
+    "bin_auroc": 0.9138919541921087,
+    "bin_f1": 0.7887323943661971,
+    "bin_sens": 0.7072463768115942,
+    "macro_f1": 0.6857970099613185,
+    "weighted_f1": 0.7625079648619792,
+    "per_auroc": [
+      0.9303970223325062,
+      0.9670708406819517,
+      0.9066305074087175,
+      0.9576510044859619,
+      0.8633546581367453
+    ]
+  }
+}

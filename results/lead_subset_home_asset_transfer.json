@@ -1,0 +1,63 @@
+{
+  "hostname": "메인컴퓨터",
+  "time": "2026-09-08T18:45:29.2858899+09:00",
+  "source_root": "D:\\WidU_ecg-fm_emergency-detection_git",
+  "files": [
+    {
+      "relative_path": "data\\processed\\cpsc2018\\test\\labels.npy",
+      "bytes": 602,
+      "sha256": "d78689070d774b8be8bc1ac8f91cb74e8b1db2dc959e32450b4044fbbecb7ba2",
+      "copy_sha256": "d78689070d774b8be8bc1ac8f91cb74e8b1db2dc959e32450b4044fbbecb7ba2",
+      "verified": true
+    },
+    {
+      "relative_path": "data\\processed\\cpsc2018\\test\\record_ids.npy",
+      "bytes": 42262,
+      "sha256": "bd65466e9bfb617744296957badce80629c354cdccec833ad29962133dda26f4",
+      "copy_sha256": "bd65466e9bfb617744296957badce80629c354cdccec833ad29962133dda26f4",
+      "verified": true
+    },
+    {
+      "relative_path": "data\\processed\\cpsc2018\\test\\signals.npy",
+      "bytes": 113760128,
+      "sha256": "44c8e86a71a014472885c12385b83085356eeb786d21a2f199354882dd3e5e00",
+      "copy_sha256": "44c8e86a71a014472885c12385b83085356eeb786d21a2f199354882dd3e5e00",
+      "verified": true
+    },
+    {
+      "relative_path": "data\\processed\\cpsc2018_mc\\test\\labels.npy",
+      "bytes": 1064,
+      "sha256": "552630f68b169de1605c672424166b5432035e46c86c5d81debe6e8ccfeb9e5b",
+      "copy_sha256": "552630f68b169de1605c672424166b5432035e46c86c5d81debe6e8ccfeb9e5b",
+      "verified": true
+    },
+    {
+      "relative_path": "data\\processed\\cpsc2018_mc\\test\\labels_bin.npy",
+      "bytes": 1064,
+      "sha256": "b302dc77e5f59e1f8ec3ff226870716c90290467259052e7ce6cfa70d6b7c5a0",
+      "copy_sha256": "b302dc77e5f59e1f8ec3ff226870716c90290467259052e7ce6cfa70d6b7c5a0",
+      "verified": true
+    },
+    {
+      "relative_path": "data\\processed\\cpsc2018_mc\\test\\record_ids.npy",
+      "bytes": 83842,
+      "sha256": "4c6be29268e2270e9e46537b517260446451f92141c525f1631f225c23312218",
+      "copy_sha256": "4c6be29268e2270e9e46537b517260446451f92141c525f1631f225c23312218",
+      "verified": true
+    },
+    {
+      "relative_path": "data\\processed\\cpsc2018_mc\\test\\signals.npy",
+      "bytes": 224640128,
+      "sha256": "c845bb6c30faa369c72c676fb51bb89e24ade4a2043fe406c00e48fe9fd65045",
+      "copy_sha256": "c845bb6c30faa369c72c676fb51bb89e24ade4a2043fe406c00e48fe9fd65045",
+      "verified": true
+    },
+    {
+      "relative_path": "outputs\\lora_multisnr\\lora_multisnr_best.pt",
+      "bytes": 1200146,
+      "sha256": "ecdb2816fbfecf3ce41ff2e3263e3bdaefd75a5bba81a8e030b7390f03e8d244",
+      "copy_sha256": "ecdb2816fbfecf3ce41ff2e3263e3bdaefd75a5bba81a8e030b7390f03e8d244",
+      "verified": true
+    }
+  ]
+}
