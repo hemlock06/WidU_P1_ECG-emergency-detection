@@ -50,6 +50,13 @@ def validate(rows):
             raise ValueError("Wrong sample count")
         numeric = [k for k in row if k.startswith(("auroc_", "f1_", "sens"))]
         numeric += ["binary_auroc", "macro_f1", "macro_sensitivity"]
+        required = (
+            numeric
+            if row["model"] == "P1_a07"
+            else ["binary_auroc", "sens_at_95sp", "f1_at_05"]
+        )
+        if any(row[k] == "" for k in required):
+            raise ValueError("Missing measurable metric")
         for key in numeric:
             if row[key] and not np.isfinite(float(row[key])):
                 raise ValueError(f"Nonfinite {key}")
@@ -141,6 +148,20 @@ def main():
         saved = pred_dir / f"{row['model']}_{'-'.join(map(str, indices(row)))}.npz"
         if sha256(saved) != row["prediction_sha256"]:
             raise ValueError(f"Prediction hash mismatch: {saved}")
+        with np.load(saved, allow_pickle=False) as stored:
+            if len(stored["record_ids"]) != int(row["n_samples"]) or len(
+                set(stored["record_ids"])
+            ) != int(row["n_samples"]):
+                raise ValueError(f"Invalid record IDs: {saved}")
+            measured = metrics(
+                stored["labels_bin"],
+                stored["binary_probs"],
+                stored.get("labels_mc"),
+                stored.get("multiclass_probs"),
+            )
+            for key, value in measured.items():
+                if isinstance(value, float) and abs(value - float(row[key])) > 1e-7:
+                    raise ValueError(f"Raw metric mismatch: {saved}/{key}")
 
     def predictions(row):
         path = pred_dir / f"P1_a07_{'-'.join(map(str, indices(row)))}.npz"
@@ -149,6 +170,20 @@ def main():
     baseline = np.load(
         pred_dir / "P1_a07_0-1-2-3-4-5-6-7-8-9-10-11.npz", allow_pickle=False
     )
+    with (root / "exhaustive_lead_subsets_controls.csv").open(
+        newline="", encoding="utf-8"
+    ) as stream:
+        baseline_row = next(
+            r
+            for r in csv.DictReader(stream)
+            if r["model"] == "P1_a07" and int(r["n_leads"]) == 12
+        )
+    if (
+        baseline_row["run_fingerprint"] != fingerprint
+        or sha256(pred_dir / "P1_a07_0-1-2-3-4-5-6-7-8-9-10-11.npz")
+        != baseline_row["prediction_sha256"]
+    ):
+        raise ValueError("Baseline control identity/hash mismatch")
     if len(baseline["record_ids"]) != 936 or len(set(baseline["record_ids"])) != 936:
         raise ValueError("Baseline must contain exactly 936 unique records")
     baseline_metrics = metrics(
@@ -250,8 +285,22 @@ def main():
         "",
         "전극 수는 표준 유도 계산에 필요한 전극의 하한이다. 접지/DRL·장치 제약은 별도다.",
         "사지 파생유도를 독립 측정 채널로 중복 계산하지 않는다. 최소 전극 후보는 성능 동등성을 뜻하지 않는다.",
+        "",
+        "## 리드 수별 P1 Macro-F1 분포",
+        "",
+        "| 리드 수 | 조합 수 | 최고 | 중앙 | 최저 | 분산 |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
-    for key in ["macro_f1", "macro_sensitivity"] + [f"sens95_{c}" for c in CLASSES[1:]]:
+    for n in range(1, 5):
+        values = np.array([float(r["macro_f1"]) for r in p1 if int(r["n_leads"]) == n])
+        lines.append(
+            f"| {n} | {len(values)} | {values.max():.6f} | {np.median(values):.6f} | {values.min():.6f} | {values.var():.8f} |"
+        )
+    for key in ["macro_f1", "macro_sensitivity"] + [
+        f"{m}_{c}"
+        for c in CLASSES[1:]
+        for m in ("auroc", "f1", "sensitivity", "sens95")
+    ]:
         top = sorted(p1, key=lambda r: float(r[key]), reverse=True)[:10]
         lines += ["", f"## {key} top 10", "", "| 리드 | 값 |", "|---|---:|"]
         lines.extend(f"| {r['lead_names']} | {float(r[key]):.6f} |" for r in top)

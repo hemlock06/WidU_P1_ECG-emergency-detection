@@ -10,6 +10,7 @@ import torch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import ablation_exhaustive_lead_subsets as experiment
+import calibrate_lead_subset_controls as calibration
 import summarize_exhaustive_lead_subsets as summary
 
 
@@ -22,6 +23,18 @@ def test_complete_subset_space_and_mask():
     assert torch.equal(masked[:, [0, 1, 7, 10]], torch.ones(2, 4, 7))
     assert masked.sum() == 2 * 4 * 7
     assert x.sum() == 2 * 12 * 7
+
+
+def test_stochastic_gate_requires_all_draws_and_both_historical_and_fixed_seed():
+    values = np.linspace(0.6, 0.7, 39)
+    assert calibration.interval_check(0.65, values, 0.66)["passed"]
+    assert not calibration.interval_check(0.71, values, 0.66)["passed"]
+    assert not calibration.interval_check(0.65, values, 0.71)["passed"]
+    with pytest.raises(ValueError, match="39 finite"):
+        calibration.interval_check(0.65, values[:-1], 0.66)
+    values[0] = np.nan
+    with pytest.raises(ValueError, match="39 finite"):
+        calibration.interval_check(0.65, values, 0.66)
 
 
 def test_perfect_five_class_and_unmeasurable_binary_model():
@@ -61,9 +74,16 @@ def test_summary_rejects_missing_duplicate_and_nonfinite_rows():
     rows = []
     for model in experiment.MODELS:
         for combo in experiment.subsets():
+            metric_base = base
+            if model == "P1_a07":
+                ym = np.tile(np.arange(5), 2)
+                yb = np.isin(ym, [1, 2]).astype(int)
+                metric_base = experiment.metrics(
+                    yb, yb * 0.8 + 0.1, ym, np.eye(5)[ym] * 0.9 + 0.02
+                )
             rows.append(
                 {
-                    **{k: str(v) for k, v in base.items()},
+                    **{k: str(v) for k, v in metric_base.items()},
                     "model": model,
                     "lead_indices": ";".join(map(str, combo)),
                     "lead_names": ";".join(experiment.LEAD_NAMES[i] for i in combo),
@@ -78,6 +98,11 @@ def test_summary_rejects_missing_duplicate_and_nonfinite_rows():
         summary.validate(rows[:-1])
     with pytest.raises(ValueError, match="combinations"):
         summary.validate(rows + rows[:1])
+    saved_macro = rows[0]["macro_f1"]
+    rows[0]["macro_f1"] = ""
+    with pytest.raises(ValueError, match="Missing measurable"):
+        summary.validate(rows)
+    rows[0]["macro_f1"] = saved_macro
     rows[0]["binary_auroc"] = "nan"
     with pytest.raises(ValueError, match="Nonfinite"):
         summary.validate(rows)

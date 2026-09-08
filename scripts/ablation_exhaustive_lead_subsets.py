@@ -149,6 +149,8 @@ def asset_identity(seed, batch):
     for p in (
         "scripts/ablation_exhaustive_lead_subsets.py",
         "scripts/ablation_nlead_curve.py",
+        "scripts/calibrate_lead_subset_controls.py",
+        "results/lead_subset_stochastic_protocol.md",
         "patches/lora_fairseq_signals.patch",
     ):
         hashes[p] = sha256(Path(p))
@@ -324,8 +326,19 @@ def main():
     manifest = root / "exhaustive_lead_subsets_controls.json"
     if args.stage == "run":
         gate = json.loads(manifest.read_text(encoding="utf-8"))
-        if gate["fingerprint"] != fingerprint or gate["status"] != "passed":
+        if gate["fingerprint"] != fingerprint:
             raise RuntimeError("Matching positive controls have not passed")
+        if gate["status"] != "passed":
+            stochastic = json.loads(
+                (root / "exhaustive_lead_subsets_stochastic_controls.json").read_text(
+                    encoding="utf-8"
+                )
+            )
+            if (
+                stochastic["fingerprint"] != fingerprint
+                or stochastic["status"] != "passed_stochastic_reproduction"
+            ):
+                raise RuntimeError("Matching stochastic reproduction has not passed")
     controls = {
         "fingerprint": fingerprint,
         "identity": identity,
