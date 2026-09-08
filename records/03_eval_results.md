@@ -870,3 +870,46 @@ ECG-FM 90.9M 추론시간(10s 윈도우당, full pipeline): 데스크톱 **GPU 1
   STAFF 동률(둘 다 chance). 포폴엔 이 비대칭을 정직히 명시 권장.
 - caveat: CACHET 0.99 = 윈도우단위·피험자분리 없음(낙관적, §11). STAFF 라벨 미정합. LTST intra-patient 태스크 경계(§⑦).
   산출: `results/mt_final_snrext.csv`, 진단 `scripts/_diag_incart.py`.
+
+---
+
+## ⑫ 동결 P1의 1–4리드 전체 793조합 평가 (2026-09-08)
+
+기존 N별 무작위 평균이 보존하지 못한 개별 조합을 전수평가했다. 주모델은 α=0.7
+멀티태스크 체크포인트이며 역사적 5-class test 936레코드를 원본에서 복구했다.
+참고 이진 ③은 별도 binary test 474레코드에서 평가했다. 각 모델 793조합,
+총 1,586행이며 완주 실패·재개 스킵·NaN/Inf는 각각 0이다. 재학습은 하지 않았다.
+
+**재현성 경계:** 과거 단일 실현값 대조는 허용오차를 벗어나 중단했다. 기존 코드와
+새 평가 코드의 8조건 대조는 통과했고, eval에서도 적용되는 무작위 feature mask와
+과거 NumPy RNG 미보존을 확인했다. 이후 별도로 사전 고정한 39 seeds × 5조건,
+17지표 stochastic reproduction을 통과한 뒤 전수평가했다. 원 단일 seed 대조를
+통과로 변경하지 않는다. 세부 프로토콜과 모든 실패 이력은 results에 보존했다.
+
+| 후보/기준 | 리드 | Macro-F1 | Macro sensitivity |
+|---|---|---:|---:|
+| 같은 seed42 기준 | 12리드 | 0.694243 | 0.701126 |
+| 성능 우선·흉부 포함 | II·aVR·V1·V2 | 0.704307 | 0.712224 |
+| 사지 전용·2채널 | I·aVR | 0.702420 | 0.709481 |
+| 최소 측정 전극 | II | 0.689280 | 0.699519 |
+
+Macro 지표는 NSR을 포함한 5-class 평균이다. 4리드 후보의 AF·허혈·전도·이소성
+argmax sensitivity는 각각 0.894444·0.684848·0.839050·0.365854다. 이소성 약점을
+전체 평균으로 가리지 않는다. 표준 유도 구현에서 위 후보들의 측정 전극 하한은
+각각 5·3·2개이며 접지/DRL과 장치 지원 제약은 별도다.
+
+II·aVR·V1·V2의 seed42 Macro-F1 차이는 12리드 대비 +0.010065,
+paired record bootstrap 95% CI는 [-0.008611, +0.027838]이다. 사전 고정한 별도
+10 seeds에서는 평균 차이 +0.012716이고 10/10회 양수였으나, 레코드 CI는 0을
+포함하므로 우월성이 확정되지 않는다. 3리드 최고 aVR·V1·V6(0.703743)와
+4리드 최고점 차이는 +0.000565이며 같은 조합에 한 리드를 추가한 효과가 아니다.
+
+후보 선택과 CI는 같은 test를 재사용한 탐색이며 독립 검증·선택 편향 보정이 아니다.
+현재 10초 ECG의 분류 결과로, 조기예측·의류형 전극 품질이나 최종 하드웨어의
+최적성을 주장하지 않는다.
+
+- 원시 조합: `results/exhaustive_lead_subsets_1to4.csv`
+- 분포·질환별 top10·Pareto: `results/exhaustive_lead_subsets_report.md`, `results/exhaustive_lead_subsets_summary.csv`
+- 후보 상세·paired CI·난수 안정성: `results/exhaustive_lead_subsets_interpretation.md`, `results/exhaustive_lead_subsets_paired_ci.csv`, `results/exhaustive_lead_candidates_stability_summary.csv`
+- 독립 검증: `results/exhaustive_lead_subsets_verification.json`, `results/exhaustive_lead_subsets_analysis_verification.json`
+- 재현 프로토콜: `results/lead_subset_stochastic_protocol.md`, `results/exhaustive_lead_subsets_stochastic_controls.json`

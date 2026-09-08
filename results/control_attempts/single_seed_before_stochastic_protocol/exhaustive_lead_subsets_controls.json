@@ -1,5 +1,5 @@
 {
-  "fingerprint": "34060e20ca6ca6de13d114a5b1b14cf4e1fd9ffccc3f7ec4453bb00d8b5646f1",
+  "fingerprint": "fdced163018f9d0e9e80f5df274fc41e366d2f6997314a539b6026b286f6fb8a",
   "identity": {
     "sha256": {
       "checkpoints/ecg-fm/mimic_iv_ecg_physionet_pretrained.pt": "4d0142bcb485eb9f0c7845e0c19ff3463f6ae9d0e458eab69136efe90ceb9b7e",
@@ -12,10 +12,8 @@
       "data/processed/cpsc2018/test/signals.npy": "44c8e86a71a014472885c12385b83085356eeb786d21a2f199354882dd3e5e00",
       "data/processed/cpsc2018/test/labels.npy": "d78689070d774b8be8bc1ac8f91cb74e8b1db2dc959e32450b4044fbbecb7ba2",
       "data/processed/cpsc2018/test/record_ids.npy": "bd65466e9bfb617744296957badce80629c354cdccec833ad29962133dda26f4",
-      "scripts/ablation_exhaustive_lead_subsets.py": "45a58f1daa564efa6e22e76f38dd72b80eb51581b4a690a93783cf70c0804120",
+      "scripts/ablation_exhaustive_lead_subsets.py": "8a217ec4b372b201735b70a2e4df702147b286ca726ff8482cca4b2b6f27fcc8",
       "scripts/ablation_nlead_curve.py": "16d4f61b82c391edddc6148ca6ac75c521d05e7b58e553f2481508239085b78f",
-      "scripts/calibrate_lead_subset_controls.py": "46778302c1fb7b6b3d8d184ffafd053eba365844c6cb86bdadfce53088e58760",
-      "results/lead_subset_stochastic_protocol.md": "a69e295251bb175e903e289d282b6b626a8b98fe2c2510a3508a8bcf81e6ba39",
       "patches/lora_fairseq_signals.patch": "9cd6e9fbd098230ed2b6da582212d45ffb1fd402d7d6ce8643e1a8416b7b2966",
       "fairseq_signals_python_source": "30c464e5b15186b2193a178e88af2855e6016d2d24eccfbd562faec1d75dadb6"
     },

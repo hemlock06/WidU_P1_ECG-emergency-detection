@@ -12,6 +12,20 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import ablation_exhaustive_lead_subsets as experiment
 import calibrate_lead_subset_controls as calibration
 import summarize_exhaustive_lead_subsets as summary
+import verify_exhaustive_lead_results as independent
+
+
+def test_independent_audit_confusion_and_tied_roc_fixture():
+    truth = np.array([0, 0, 1, 1])
+    predicted = np.array([0, 1, 1, 1])
+    f1, recall = independent.confusion_values(truth, predicted, [0, 1])
+    np.testing.assert_allclose(f1, [2 / 3, 0.8])
+    np.testing.assert_allclose(recall, [0.5, 1.0])
+    auroc, sensitivity = independent.curve_values(
+        truth, np.array([0.1, 0.4, 0.4, 0.9])
+    )
+    assert auroc == 0.875
+    assert sensitivity == 0.5
 
 
 def test_complete_subset_space_and_mask():
@@ -71,16 +85,15 @@ def test_wrong_historical_model_is_not_a_passing_control():
 
 def test_summary_rejects_missing_duplicate_and_nonfinite_rows():
     base = experiment.metrics(np.array([0, 1, 0, 1]), np.array([0.1, 0.9, 0.2, 0.8]))
+    ym = np.tile(np.arange(5), 2)
+    yb = np.isin(ym, [1, 2]).astype(int)
+    multiclass = experiment.metrics(yb, yb * 0.8 + 0.1, ym, np.eye(5)[ym] * 0.9 + 0.02)
     rows = []
     for model in experiment.MODELS:
         for combo in experiment.subsets():
             metric_base = base
             if model == "P1_a07":
-                ym = np.tile(np.arange(5), 2)
-                yb = np.isin(ym, [1, 2]).astype(int)
-                metric_base = experiment.metrics(
-                    yb, yb * 0.8 + 0.1, ym, np.eye(5)[ym] * 0.9 + 0.02
-                )
+                metric_base = multiclass
             rows.append(
                 {
                     **{k: str(v) for k, v in metric_base.items()},
@@ -112,6 +125,31 @@ def test_derived_limb_leads_do_not_inflate_electrode_count():
     assert summary.electrode_count((0,)) == 2
     assert summary.electrode_count((0, 1, 2, 3)) == 3
     assert summary.electrode_count((0, 1, 7, 10)) == 5
+
+
+def test_candidate_categories_apply_distinct_constraints():
+    examples = [
+        ((0,), 0.3),
+        ((1,), 0.6),
+        ((0, 1), 0.7),
+        ((0, 7), 0.8),
+        ((0, 1, 7, 10), 0.9),
+    ]
+    rows = [
+        {
+            "model": "P1_a07",
+            "lead_indices": ";".join(map(str, c)),
+            "n_leads": len(c),
+            "macro_f1": score,
+        }
+        for c, score in examples
+    ]
+    selected = summary.select_candidates(rows)
+    assert summary.indices(selected["performance"]) == (0, 1, 7, 10)
+    assert summary.indices(selected["minimum_electrodes"]) == (1,)
+    assert summary.indices(selected["limb_only"]) == (0, 1)
+    assert summary.indices(selected["two_channels"]) == (0, 7)
+    assert summary.indices(selected["chest_included"]) == (0, 1, 7, 10)
 
 
 def test_prediction_resets_feature_mask_rng_for_resume(monkeypatch):

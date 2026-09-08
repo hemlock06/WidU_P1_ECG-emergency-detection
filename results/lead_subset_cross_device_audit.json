@@ -1,0 +1,66 @@
+{
+  "home_environment": {
+    "python": "3.9.25",
+    "numpy": "1.26.4",
+    "torch": "2.1.2+cu118",
+    "cuda": "11.8",
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "fairseq": "C:\\fairseq-signals\\fairseq_signals\\__init__.py",
+    "sources": {
+      "Wav2Vec2CMSCModel": {
+        "path": "C:\\fairseq-signals\\fairseq_signals\\models\\wav2vec2\\wav2vec2_cmsc.py",
+        "normalized_sha256": "32b7415af8096037562abbec5a7f8eb07fdce02b3d80103ff063eb353ba8ec6a",
+        "lab_normalized_sha256": "32b7415af8096037562abbec5a7f8eb07fdce02b3d80103ff063eb353ba8ec6a",
+        "match": true
+      },
+      "Wav2Vec2Model": {
+        "path": "C:\\fairseq-signals\\fairseq_signals\\models\\wav2vec2\\wav2vec2.py",
+        "normalized_sha256": "87978be021204a6ee765b32f6bc122f316bd0b8cd61d68f1b9be6b48193cc083",
+        "lab_normalized_sha256": "87978be021204a6ee765b32f6bc122f316bd0b8cd61d68f1b9be6b48193cc083",
+        "match": true
+      },
+      "ECGTransformerModel": {
+        "path": "C:\\fairseq-signals\\fairseq_signals\\models\\ecg_transformer.py",
+        "normalized_sha256": "2d67d0130d508a54b25ffcee18e3fe686542205da1e065b96b256b49922e37e0",
+        "lab_normalized_sha256": "2d67d0130d508a54b25ffcee18e3fe686542205da1e065b96b256b49922e37e0",
+        "match": true
+      },
+      "TransformerModel": {
+        "path": "C:\\fairseq-signals\\fairseq_signals\\models\\transformer.py",
+        "normalized_sha256": "808fd41ca5e39308af1bf18fc5041c00925516db6b5df476ffe095999f7c6d01",
+        "lab_normalized_sha256": "808fd41ca5e39308af1bf18fc5041c00925516db6b5df476ffe095999f7c6d01",
+        "match": true
+      },
+      "PretrainingModel": {
+        "path": "C:\\fairseq-signals\\fairseq_signals\\models\\pretraining_model.py",
+        "normalized_sha256": "b0c4c00462483af6a6e9b6ee264fca5ef2a68a9b4fe758f9c882e9f45f852378",
+        "lab_normalized_sha256": "b0c4c00462483af6a6e9b6ee264fca5ef2a68a9b4fe758f9c882e9f45f852378",
+        "match": true
+      },
+      "BaseModel": {
+        "path": "C:\\fairseq-signals\\fairseq_signals\\models\\model.py",
+        "normalized_sha256": "903fb2e49cd933353b47b7521b808bf987b7828632a703ea5c643ae0208fd0a9",
+        "lab_normalized_sha256": "903fb2e49cd933353b47b7521b808bf987b7828632a703ea5c643ae0208fd0a9",
+        "match": true
+      }
+    },
+    "mask_settings": {
+      "mask_prob": 0.65,
+      "mask_channel_prob": 0.0,
+      "mask_length": 10,
+      "mask_channel_length": 10
+    }
+  },
+  "first32_cross_device_comparison": {
+    "binary_probs": {
+      "max_abs_delta": 3.5762786865234375e-07,
+      "allclose_1e_6": true
+    },
+    "multiclass_probs": {
+      "max_abs_delta": 1.9073486328125e-06,
+      "allclose_1e_6": false
+    },
+    "argmax_equal": true
+  },
+  "scope": "32-record implementation/environment check; not historical full-test reproduction"
+}

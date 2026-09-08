@@ -1,0 +1,23 @@
+{
+  "seeds_predeclared": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009
+  ],
+  "run_fingerprint": "34060e20ca6ca6de13d114a5b1b14cf4e1fd9ffccc3f7ec4453bb00d8b5646f1",
+  "raw_search_sha256": "d8dee32c1d7ddad6437eef66ca6e22365c78591182b1f7045c7f98a44ba143ac",
+  "script_sha256": "4b3d3f1188e1c93722a2dff60f11a9b4dee363f2e103c060cb130cdaf56da3d2",
+  "unique_lead_configurations_including12": 4,
+  "realizations": 40,
+  "runtime_sec": 264.19479480000155,
+  "failures": 0,
+  "skips": 0,
+  "scope": "post-selection feature-mask stability, not independent cohort validation"
+}

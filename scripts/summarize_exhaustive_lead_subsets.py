@@ -31,6 +31,20 @@ def indices(row):
     return tuple(map(int, row["lead_indices"].split(";")))
 
 
+def select_candidates(rows):
+    p1 = [r for r in rows if r["model"] == "P1_a07"]
+    best = lambda group: max(group, key=lambda r: float(r["macro_f1"]))
+    return {
+        "performance": best(p1),
+        "minimum_electrodes": min(
+            p1, key=lambda r: (electrode_count(indices(r)), -float(r["macro_f1"]))
+        ),
+        "chest_included": best([r for r in p1 if any(i >= 6 for i in indices(r))]),
+        "limb_only": best([r for r in p1 if all(i < 6 for i in indices(r))]),
+        "two_channels": best([r for r in p1 if int(r["n_leads"]) == 2]),
+    }
+
+
 def validate(rows):
     expected = {(model, combo) for model in MODELS for combo in subsets()}
     actual = [(r["model"], indices(r)) for r in rows]
@@ -132,16 +146,7 @@ def main():
         if summary_bytes(list(csv.DictReader(stream))) != summary_path.read_bytes():
             raise RuntimeError("Summary regeneration mismatch")
     p1 = [r for r in rows if r["model"] == "P1_a07"]
-    best = lambda group: max(group, key=lambda r: float(r["macro_f1"]))
-    candidates = {
-        "performance": best(p1),
-        "minimum_electrodes": min(
-            p1, key=lambda r: (electrode_count(indices(r)), -float(r["macro_f1"]))
-        ),
-        "chest_included": best([r for r in p1 if any(i >= 6 for i in indices(r))]),
-        "limb_only": best([r for r in p1 if all(i < 6 for i in indices(r))]),
-        "two_channels": best([r for r in p1 if int(r["n_leads"]) == 2]),
-    }
+    candidates = select_candidates(rows)
     fingerprint = p1[0]["run_fingerprint"]
     pred_dir = Path("outputs/exhaustive_lead_subsets") / fingerprint
     for row in rows:
@@ -259,18 +264,36 @@ def main():
     )
     if run_status["run_fingerprint"] != fingerprint:
         raise ValueError("Run status does not match the CSV")
+    stochastic = json.loads(
+        (root / "exhaustive_lead_subsets_stochastic_controls.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    if (
+        stochastic["fingerprint"] != fingerprint
+        or stochastic["status"] != "passed_stochastic_reproduction"
+        or run_status["failures"] != 0
+    ):
+        raise ValueError("Stochastic gate or completed-run evidence invalid")
     lines = [
         "# ECG 1–4리드 전수평가",
         "",
-        "상태: 미검증 — 이전 중단 로그의 해소 여부 확인 필요."
-        if failure_logs
-        else "상태: 조합 수·유효값·요약 재생성 검증 완료.",
+        "상태: 전수평가 계산 검증 완료; 과거 단일 실현값의 허용오차 내 재현은 미검증(대조 실패 보존).",
         f"실행 중단 로그 {len(failure_logs)}건; 완주 실행 실패 {run_status['failures']}건; 재개 스킵 {run_status['resumed_skips']}건; CSV NaN/Inf 0건.",
+        "중단 로그는 자산 복구·사전 대조 단계의 이력이며 완주 실패 수와 합치지 않는다.",
+        "기존 코드와 새 코드의 8조건 대조는 통과했다. eval에서도 활성인 난수 feature mask와 과거 NumPy RNG 미보존을 확인했다.",
+        "단일 seed 대조 실패 후 고정한 별도 프로토콜: 39 seeds × 5조건 = 195회, 17지표 모두 passed_stochastic_reproduction.",
+        "이 통과는 과거 수치의 확률적 재현과 양립함을 뜻하며 원 단일 seed 대조 실패를 통과로 바꾸지 않는다.",
+        "39개 실현의 min–max 범위는 지표별 범위이며 평균의 신뢰구간이나 17지표 동시 보장을 뜻하지 않는다.",
         "793개/모델. 응급 이진 참고모델과 P1 멀티태스크 결과를 구분한다.",
         f"원시 CSV SHA-256: `{sha256(source)}`",
         "",
         "현재 10초 ECG의 탐색적 분류 평가다. 조기예측·직물 전극 품질·독립 검증 성능이 아니다.",
         "후보 선택과 CI가 같은 test에 기반하므로 선택 편향과 다중비교가 존재한다.",
+        "주평가 Macro-F1·macro sensitivity는 정상(NSR)을 포함한 5-class 평균이다. 질환별 지표도 별도로 제시한다.",
+        "sensitivity는 5-class argmax recall, Sens@95Sp는 one-vs-rest ROC에서 specificity≥0.95인 점의 최대 sensitivity다.",
+        "ROC 임계값은 이 test에서 산출한 탐색적 값이며 배포용으로 독립 고정된 임계값이 아니다.",
+        "paired bootstrap CI는 같은 936개 레코드를 함께 재표집한 percentile 95% 구간이다. 고정 feature-mask seed 42에 조건부이며 선택 편향·환자 간 독립성·난수 변동을 보정하지 않는다.",
         "",
         "## 후보",
         "",

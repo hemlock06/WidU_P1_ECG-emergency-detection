@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "stability_summary_rows": 90,
+  "stability_realizations": 40,
+  "maximum_summary_recalculation_error": 0.0,
+  "paired_ci_rows": 70,
+  "bootstrap_per_category": 2000,
+  "bootstrap_skips": 0,
+  "summary_reproduced_byte_identically": true,
+  "source_sha256": "d8dee32c1d7ddad6437eef66ca6e22365c78591182b1f7045c7f98a44ba143ac",
+  "script_sha256": "6904bca75d13e5feee7bcf3bc9d80e3c83ddd2043365d08f15af9d17b1973f9c"
+}

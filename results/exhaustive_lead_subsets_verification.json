@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "run_fingerprint": "34060e20ca6ca6de13d114a5b1b14cf4e1fd9ffccc3f7ec4453bb00d8b5646f1",
+  "raw_sha256": "d8dee32c1d7ddad6437eef66ca6e22365c78591182b1f7045c7f98a44ba143ac",
+  "script_sha256": "1446c8f6263dfec18827c3857301181bd12eef795074a92df6ca6382cb29ccca",
+  "rows": 1586,
+  "model_counts": {
+    "P1_a07": 793,
+    "reference_iii": 793
+  },
+  "n_counts_per_model": {
+    "P1_a07": {
+      "4": 495,
+      "2": 66,
+      "3": 220,
+      "1": 12
+    },
+    "reference_iii": {
+      "3": 220,
+      "4": 495,
+      "1": 12,
+      "2": 66
+    }
+  },
+  "identity_files_rehashed": 15,
+  "prediction_files_rehashed_and_source_labels_matched": 1586,
+  "independent_metric_checks": 22204,
+  "maximum_absolute_metric_error": 3.3306690738754696e-16,
+  "failures": 0,
+  "resumed_skips": 0,
+  "scope": "Independent confusion-matrix and full-ROC recalculation; not independent cohort validation"
+}
