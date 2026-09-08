@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \".\\scripts\\ablation_exhaustive_lead_subsets.py\", line 429, in <module>\n    main()\n  File \".\\scripts\\ablation_exhaustive_lead_subsets.py\", line 279, in main\n    identity, fingerprint = asset_identity(args.seed, args.batch)\n  File \".\\scripts\\ablation_exhaustive_lead_subsets.py\", line 144, in asset_identity\n    raise FileNotFoundError(\"Required assets missing: \" + \", \".join(missing))\nFileNotFoundError: Required assets missing: data/processed/cpsc2018_mc/test/signals.npy, data/processed/cpsc2018_mc/test/labels.npy, data/processed/cpsc2018_mc/test/record_ids.npy, data/processed/cpsc2018_mc/test/labels_bin.npy, outputs/lora_multisnr/lora_multisnr_best.pt, data/processed/cpsc2018/test/signals.npy, data/processed/cpsc2018/test/labels.npy, data/processed/cpsc2018/test/record_ids.npy\n",
+  "traceback_paths": "repository_relative"
+}

@@ -1,0 +1,313 @@
+{
+  "raw": {
+    "headers": 6877,
+    "signals": 6877,
+    "unpaired": [],
+    "empty_files": [],
+    "reference_csv_present": false
+  },
+  "datasets": {
+    "cpsc2018": {
+      "exists": true,
+      "splits": {
+        "train": {
+          "labels.npy": {
+            "shape": [
+              2233
+            ],
+            "dtype": "int8",
+            "sha256": "f4e51e52b32ee0d5d1c3e801b720ec4b00c7b2f40f34169de6ec48ece48faddb",
+            "distribution": {
+              "0": 624,
+              "1": 1609
+            }
+          },
+          "record_ids.npy": {
+            "shape": [
+              2233
+            ],
+            "dtype": "object",
+            "sha256": "ce7c637ac3d265c9d3726b64d3027ad095191d6ff8a1c4097dab067f010fd44c",
+            "unique": 2233
+          },
+          "signals.npy": {
+            "shape": [
+              2233,
+              12,
+              5000
+            ],
+            "dtype": "float32",
+            "sha256": "7d3036a51deab11035280cb771244c9e2dd5f56c7c360b037421feb9364d3df5",
+            "nonfinite": 0
+          }
+        },
+        "val": {
+          "labels.npy": {
+            "shape": [
+              478
+            ],
+            "dtype": "int8",
+            "sha256": "ddec055351cacb6ebda561926f41a63c3b5acb6308f59fc8f44421eefb52210b",
+            "distribution": {
+              "0": 149,
+              "1": 329
+            }
+          },
+          "record_ids.npy": {
+            "shape": [
+              478
+            ],
+            "dtype": "object",
+            "sha256": "8bda69aa86ee516406905b8968216521418170817496a0ecb0850d6d6de3748f",
+            "unique": 478
+          },
+          "signals.npy": {
+            "shape": [
+              478,
+              12,
+              5000
+            ],
+            "dtype": "float32",
+            "sha256": "0bc67c7680dc69735c5fdf88ce6427c181ee970c21664767b324ace9742dd563",
+            "nonfinite": 0
+          }
+        },
+        "test": {
+          "labels.npy": {
+            "shape": [
+              480
+            ],
+            "dtype": "int8",
+            "sha256": "0d74b41e77749e52c473b2f742732d3fada254dac7eb4cadacc8b8e9ae67b910",
+            "distribution": {
+              "0": 145,
+              "1": 335
+            }
+          },
+          "record_ids.npy": {
+            "shape": [
+              480
+            ],
+            "dtype": "object",
+            "sha256": "fc1a4931414de6576c83ef4ddefaa4c496030f8d439fa37137002b87d984afec",
+            "unique": 480
+          },
+          "signals.npy": {
+            "shape": [
+              480,
+              12,
+              5000
+            ],
+            "dtype": "float32",
+            "sha256": "d5c6c6e3463ea217ad664011b34adb557db063bc100516bdb70d4272de496dd9",
+            "nonfinite": 0
+          }
+        }
+      },
+      "test_fingerprint": "cb58028111831c8c2dd459e700a698af3fb0a55e515cf2c25a97dee803257189",
+      "expected_test_count": 474,
+      "test_count_passed": false
+    },
+    "cpsc2018_mc": {
+      "exists": false,
+      "splits": {},
+      "expected_test_count": 936,
+      "test_count_passed": false
+    },
+    "cpsc2018_mc_ml": {
+      "exists": true,
+      "splits": {
+        "train": {
+          "labels.npy": {
+            "shape": [
+              4813
+            ],
+            "dtype": "int8",
+            "sha256": "ae3222e2395257a2439e03184a3db3f8a18fee558ec3d0a0fc31e0169c66c4aa",
+            "distribution": {
+              "0": 659,
+              "1": 789,
+              "2": 783,
+              "3": 1776,
+              "4": 806
+            }
+          },
+          "labels_bin.npy": {
+            "shape": [
+              4813
+            ],
+            "dtype": "int8",
+            "sha256": "38bbe562ff538bee916aaa681c0b4b4cdc28b4c33333167a14cdb06d5aa2da85",
+            "distribution": {
+              "0": 3241,
+              "1": 1572
+            }
+          },
+          "labels_mc.npy": {
+            "shape": [
+              4813,
+              5
+            ],
+            "dtype": "int8",
+            "sha256": "401e41eb86be9603f634e4e77c4e170c1ee2ab120a3fbd7f3d15093b096b5865",
+            "positive_counts": [
+              659,
+              814,
+              783,
+              1967,
+              930
+            ]
+          },
+          "record_ids.npy": {
+            "shape": [
+              4813
+            ],
+            "dtype": "object",
+            "sha256": "60228e2d120cbd072d9c2be28cdec0d4860b4e9e7b0e0567300d654064208845",
+            "unique": 4813
+          },
+          "signals.npy": {
+            "shape": [
+              4813,
+              12,
+              5000
+            ],
+            "dtype": "float32",
+            "sha256": "39e9be11784799e0f147479fa9a3d95c59da74bb282208b21878a64ea40c1806",
+            "nonfinite": 0
+          }
+        },
+        "val": {
+          "labels.npy": {
+            "shape": [
+              1031
+            ],
+            "dtype": "int8",
+            "sha256": "4a1011b1e09e54e970d0121b46947834f652d51236d2b28a2d3fb140dc13a7e8",
+            "distribution": {
+              "0": 134,
+              "1": 195,
+              "2": 157,
+              "3": 386,
+              "4": 159
+            }
+          },
+          "labels_bin.npy": {
+            "shape": [
+              1031
+            ],
+            "dtype": "int8",
+            "sha256": "3c896ba6d69f42cc716d76593906af32060bc980083f9e0723237e3a501f1c72",
+            "distribution": {
+              "0": 679,
+              "1": 352
+            }
+          },
+          "labels_mc.npy": {
+            "shape": [
+              1031,
+              5
+            ],
+            "dtype": "int8",
+            "sha256": "b4745d3f1e7cc2fe99bef315aa19b30b7d8e52489ee7e8f73404ec768cb6cf7c",
+            "positive_counts": [
+              134,
+              199,
+              157,
+              416,
+              185
+            ]
+          },
+          "record_ids.npy": {
+            "shape": [
+              1031
+            ],
+            "dtype": "object",
+            "sha256": "adb887d7e1bdb0e33f95cd9397f7811630e9a787eb7f407328fdf3b39f76d772",
+            "unique": 1031
+          },
+          "signals.npy": {
+            "shape": [
+              1031,
+              12,
+              5000
+            ],
+            "dtype": "float32",
+            "sha256": "fccffc89a9f37edaa19b97fce44dcca5eebe567829529917cde2a60b75830c61",
+            "nonfinite": 0
+          }
+        },
+        "test": {
+          "labels.npy": {
+            "shape": [
+              1033
+            ],
+            "dtype": "int8",
+            "sha256": "ff42ea0ee227e26e34278c0a6215cece2b4a3c280e0ffde3e4f505012fc5da3c",
+            "distribution": {
+              "0": 125,
+              "1": 202,
+              "2": 147,
+              "3": 381,
+              "4": 178
+            }
+          },
+          "labels_bin.npy": {
+            "shape": [
+              1033
+            ],
+            "dtype": "int8",
+            "sha256": "a6eef5ef3ebefd7364b4a9190219e5fff7fc2f1bb955721087bae6a3387c9f3d",
+            "distribution": {
+              "0": 684,
+              "1": 349
+            }
+          },
+          "labels_mc.npy": {
+            "shape": [
+              1033,
+              5
+            ],
+            "dtype": "int8",
+            "sha256": "d5b585c4f987940a5d8eac4f5b88edeb2b824116e8a17ca3255cf7963b49b102",
+            "positive_counts": [
+              125,
+              208,
+              147,
+              414,
+              198
+            ]
+          },
+          "record_ids.npy": {
+            "shape": [
+              1033
+            ],
+            "dtype": "object",
+            "sha256": "faf34a84bb8d65eb48325fc8be4a1db232bd34180689ccbd88a080dcc5d450ac",
+            "unique": 1033
+          },
+          "signals.npy": {
+            "shape": [
+              1033,
+              12,
+              5000
+            ],
+            "dtype": "float32",
+            "sha256": "0d59041fc1317d7ede1477eb041bd0760ddae502ba5d42be1361ef05e7010222",
+            "nonfinite": 0
+          }
+        }
+      },
+      "test_fingerprint": "6a632d25da16bc75811123e6cb6c31b48367fd05d593e18dd48ea7a4d2bb3934"
+    }
+  },
+  "sources": {
+    "download_cpsc2018.py": "e6eb4826a5ebee67525ad29f35917ca54da951002b8791508968e91fa8596081",
+    "preprocess_cpsc2018.py": "2d127af6673e9fc18dfb834698cebb071093727aa6e667b4f968291fe8373278",
+    "preprocess_cpsc2018_mc.py": "9867b814a004cca8389ff0631b0623b55a99b21cedae0e0713d3732c441cfa54"
+  },
+  "requested_test_counts": {
+    "cpsc2018": 474,
+    "cpsc2018_mc": 936
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "python": "3.10.21",
+  "assets": {
+    "checkpoints/ecg-fm/mimic_iv_ecg_physionet_pretrained.pt": {
+      "bytes": 1090825421,
+      "sha256": "4d0142bcb485eb9f0c7845e0c19ff3463f6ae9d0e458eab69136efe90ceb9b7e"
+    },
+    "outputs/lora_multitask_snr_a07/lora_multitask_snr_best.pt": {
+      "bytes": 364840844,
+      "sha256": "287148bfd01ac67b5192268c6c69cc4cc230c004bdfdf332285f38a3b43b08dd"
+    },
+    "data/processed/cpsc2018/test/signals.npy": {
+      "shape": [
+        480,
+        12,
+        5000
+      ],
+      "dtype": "float32",
+      "sha256": "d5c6c6e3463ea217ad664011b34adb557db063bc100516bdb70d4272de496dd9",
+      "nonfinite": 0
+    },
+    "data/processed/cpsc2018/test/labels.npy": {
+      "shape": [
+        480
+      ],
+      "dtype": "int8",
+      "sha256": "0d74b41e77749e52c473b2f742732d3fada254dac7eb4cadacc8b8e9ae67b910",
+      "distribution": {
+        "0": 145,
+        "1": 335
+      }
+    },
+    "data/processed/cpsc2018/test/record_ids.npy": {
+      "shape": [
+        480
+      ],
+      "dtype": "object",
+      "sha256": "fc1a4931414de6576c83ef4ddefaa4c496030f8d439fa37137002b87d984afec",
+      "unique_records": 480
+    }
+  },
+  "errors": [
+    "Missing checkpoint: outputs/lora_multisnr/lora_multisnr_best.pt",
+    "data\\processed\\cpsc2018\\test\\signals.npy: expected 474, got 480",
+    "data\\processed\\cpsc2018\\test\\labels.npy: expected 474, got 480",
+    "data\\processed\\cpsc2018\\test\\record_ids.npy: expected 474, got 480",
+    "Missing test asset: data/processed/cpsc2018_mc/test/signals.npy",
+    "Missing test asset: data/processed/cpsc2018_mc/test/labels.npy",
+    "Missing test asset: data/processed/cpsc2018_mc/test/labels_bin.npy",
+    "Missing test asset: data/processed/cpsc2018_mc/test/record_ids.npy"
+  ],
+  "torch": "2.7.1+cu128",
+  "cuda_runtime": "12.8",
+  "cuda_available": true,
+  "compiled_architectures": [
+    "sm_50",
+    "sm_60",
+    "sm_61",
+    "sm_70",
+    "sm_75",
+    "sm_80",
+    "sm_86",
+    "sm_90",
+    "sm_100",
+    "sm_120"
+  ],
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "compute_capability": [
+    12,
+    0
+  ],
+  "checkpoint_metadata": {
+    "epoch": 18,
+    "alpha": 0.7,
+    "lora_rank": 8,
+    "lora_alpha": 16.0,
+    "val_composite": 0.8051110704554267
+  },
+  "lora_modules": 24,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "forward": {
+    "status": "passed",
+    "embedding": [
+      1,
+      768
+    ],
+    "binary": [
+      1
+    ],
+    "multiclass": [
+      1,
+      5
+    ],
+    "input": "synthetic hardware smoke, not performance evaluation"
+  },
+  "status": "blocked"
+}
