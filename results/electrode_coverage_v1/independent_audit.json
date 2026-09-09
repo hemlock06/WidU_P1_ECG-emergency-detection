@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "run_id": "9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7",
+  "raw_sha256": "39926084d8de8dc06c4d683e4943c5090ed15df1d1938dbab2b3f8386deb6fee",
+  "preflight_sha256": "9aeaea4ea79010f6cbc9f2892ebddf7b3f65a877f8c32612d13a08c066e9cf6f",
+  "auditor_sha256": "318f0aa8293e6cde6861413d9b9b85ee0a9aa75f85b2759abca696a1b55781db",
+  "metric_helper_sha256": "1446c8f6263dfec18827c3857301181bd12eef795074a92df6ca6382cb29ccca",
+  "utc": "2026-09-09T13:46:55.657783+00:00",
+  "rows": 4095,
+  "origins": {
+    "prior_exhaustive": 793,
+    "prior_control": 1,
+    "new_inference": 3301
+  },
+  "contact_counts": {
+    "2": 3,
+    "3": 60,
+    "4": 384,
+    "5": 960,
+    "6": 1280,
+    "7": 960,
+    "9": 64,
+    "8": 384
+  },
+  "metrics_checked": 102375,
+  "maximum_absolute_error": 3.3306690738754696e-16,
+  "prediction_files_checked": 4095,
+  "preflight_files_checked": 6,
+  "failure_events": 0,
+  "externally_observed_interruptions": 1,
+  "run_invocations": 2,
+  "resumed_new_rows_final_invocation": 816,
+  "scope": "Independent metric/data audit; not independent cohort validation"
+}

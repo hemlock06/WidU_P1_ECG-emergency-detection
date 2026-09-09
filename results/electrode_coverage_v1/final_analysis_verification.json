@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "utc": "2026-09-09T13:57:43.996166+00:00",
+  "run_id": "9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7",
+  "repeat_run_id": "59f35a0254ab1e0fe9f5dc2926f7dd5c781b4a1da02f35cc138699bf537d745a",
+  "verifier_sha256": "c396ad8997cc071efc760bd06feb61789e260371fc32738c397f2c75be22e8c1",
+  "candidate_receipt_sha256": "93e965031e2171771a0c172d78d8b961aeea77e1e0b9417df1e192672c61d3d6",
+  "repeated_predictions": 80,
+  "repeated_metrics": 2000,
+  "summary_rows": 144,
+  "interval_rows": 144,
+  "pareto_rows_independently_checked": 44,
+  "coverage_grid_rows_checked": 20475,
+  "orphan_or_missing_expanded_and_repeat_predictions": 0,
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 31415,
+  "skipped": 0,
+  "method": "Separate NumPy tied-rank ROC and bincount confusion path; shared paired draws",
+  "scope": "Numerical verification only; exploratory selection bias remains"
+}

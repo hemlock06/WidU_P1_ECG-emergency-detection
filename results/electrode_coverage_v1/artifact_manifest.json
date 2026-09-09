@@ -1,0 +1,114 @@
+{
+  "results/electrode_coverage_v1/analysis.json": {
+    "sha256": "dc1371083d8eace9cca581dd3f5504cf543e39a9b24228a1dcf6af5d0afdd383",
+    "bytes": 1514
+  },
+  "results/electrode_coverage_v1/candidate_analysis.json": {
+    "sha256": "93e965031e2171771a0c172d78d8b961aeea77e1e0b9417df1e192672c61d3d6",
+    "bytes": 1065
+  },
+  "results/electrode_coverage_v1/candidate_events.jsonl": {
+    "sha256": "a6fa8657a50653bb4d304df937dcf4bd825ecb979a3b369e06722371b3e92655",
+    "bytes": 3748
+  },
+  "results/electrode_coverage_v1/complete_physical_configurations.csv": {
+    "sha256": "f096ae806b4461ac18f1bc70fa46d5b61b056f30d037f470adb6d43845f8423d",
+    "bytes": 74021
+  },
+  "results/electrode_coverage_v1/contact_winners.csv": {
+    "sha256": "492155bc84ec80a8418bb2723ee43b8fb7d09ad3383870eb59e8ffc9bd75d877",
+    "bytes": 17987
+  },
+  "results/electrode_coverage_v1/coverage_grid.csv": {
+    "sha256": "a21062de6631cb40bc23ae882a0092a4c735956289025e328c748bea9fd5d7a2",
+    "bytes": 993340
+  },
+  "results/electrode_coverage_v1/events.jsonl": {
+    "sha256": "140c66d3e4115fb17ccb0064993762307bfe990af57a5b05cf1ea8910f85c9cf",
+    "bytes": 2514
+  },
+  "results/electrode_coverage_v1/final_analysis_verification.json": {
+    "sha256": "417ac01c5fada47df96ef2ff58c74d619b2637ad83c2ec3a06f6510a134bc836",
+    "bytes": 930
+  },
+  "results/electrode_coverage_v1/independent_audit.json": {
+    "sha256": "50a17b8a794f7da107cb22b2adb38dc6b235eddc16dec0f66a39da6e13f5e14f",
+    "bytes": 1151
+  },
+  "results/electrode_coverage_v1/paired_intervals.csv": {
+    "sha256": "6d24f91d2b0a14f3d2436e12cc5dc6372c781d10f0b64d07f1bf3bbe4ecdc750",
+    "bytes": 16137
+  },
+  "results/electrode_coverage_v1/pareto.csv": {
+    "sha256": "db40a9bc7b859dac48f661ffe6718b3923669a12650fec193ea9e2a2ea3ea35c",
+    "bytes": 46643
+  },
+  "results/electrode_coverage_v1/preflight.json": {
+    "sha256": "9aeaea4ea79010f6cbc9f2892ebddf7b3f65a877f8c32612d13a08c066e9cf6f",
+    "bytes": 13055
+  },
+  "results/electrode_coverage_v1/raw.csv": {
+    "sha256": "39926084d8de8dc06c4d683e4943c5090ed15df1d1938dbab2b3f8386deb6fee",
+    "bytes": 4244964
+  },
+  "results/electrode_coverage_v1/report.md": {
+    "sha256": "55454cd734abd7c763ac65ddc860f1c7fa43437fbea04f41fe02eb9db5642224",
+    "bytes": 8446
+  },
+  "results/electrode_coverage_v1/restart_parity.json": {
+    "sha256": "0d84be4bedd064852cca8e064e58c09b49a748ca7525278ab54b35ee4ba9fcd6",
+    "bytes": 1947
+  },
+  "results/electrode_coverage_v1/shortlist.csv": {
+    "sha256": "70fa0306526e4c397c78b2c9dfcf57488b6a4faefaf989ad31c0d5533cc8688b",
+    "bytes": 9281
+  },
+  "results/electrode_coverage_v1/stability_raw.csv": {
+    "sha256": "6ce1d54770e990862d0dafea96e793ebb935de2269c820f7b54ba23e36752c93",
+    "bytes": 73974
+  },
+  "results/electrode_coverage_v1/stability_status.json": {
+    "sha256": "7ec46a849ac11270ae6d055183ccf360a25d295867cd8195742b1596e962b0d7",
+    "bytes": 4118
+  },
+  "results/electrode_coverage_v1/stability_summary.csv": {
+    "sha256": "b914c720e578f8077685ce04971442709ab87db9c356cccd86b712e19fa7773a",
+    "bytes": 20417
+  },
+  "results/electrode_coverage_v1/status.json": {
+    "sha256": "609dfe66bf559cbe97c8985b49130d1ca8c7155831695cd08268a82009740d3d",
+    "bytes": 603
+  },
+  "results/electrode_coverage_v1/summary.csv": {
+    "sha256": "c407c53a5ce5f37ff39ca8d937e10e4a4f24d7061a6b7a32ef9a34018a70470f",
+    "bytes": 4414669
+  },
+  "scripts/verify_electrode_analysis_final.py": {
+    "sha256": "c396ad8997cc071efc760bd06feb61789e260371fc32738c397f2c75be22e8c1",
+    "bytes": 11310
+  },
+  "scripts/report_electrode_coverage.py": {
+    "sha256": "877bd251315eed92eb457c9709eb76eccc58229b2c6c44701175edf07a616378",
+    "bytes": 10893
+  },
+  "scripts/analyze_electrode_coverage.py": {
+    "sha256": "318f0aa8293e6cde6861413d9b9b85ee0a9aa75f85b2759abca696a1b55781db",
+    "bytes": 19631
+  },
+  "scripts/repeat_electrode_candidates.py": {
+    "sha256": "2e8af8452c600845f26e1bceaa49ea661e8ce88d22b5a91f67f3bfec49d33a7e",
+    "bytes": 12331
+  },
+  "scripts/verify_electrode_restart_parity.py": {
+    "sha256": "9a92266729105a69ea576e4aef0e7b837b93780b1c4e7f5026101ab015ff2653",
+    "bytes": 2992
+  },
+  "records/electrode_coverage_protocol_v1.md": {
+    "sha256": "4edbc654b058e8d77a2b21654a8d7b64a834c53cfb3b9bc4662c799d5496baa9",
+    "bytes": 6040
+  },
+  "tests/test_electrode_final_verifier.py": {
+    "sha256": "3c60405fa7a8284b3bb348d945ac31609d4ec118f1fbaf4e691ddbf739ed1c35",
+    "bytes": 2115
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "inference_complete_pending_independent_audit",
+  "run_id": "9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7",
+  "expected_rows": 4095,
+  "rows": 4095,
+  "reused_parent_rows": 794,
+  "resumed_new_rows": 816,
+  "new_rows_this_invocation": 2485,
+  "failures_this_invocation": 0,
+  "utc_started": "2026-09-09T08:48:09.811507+00:00",
+  "utc_updated": "2026-09-09T13:19:24.684721+00:00",
+  "elapsed_sec": 16273.698919000002,
+  "raw_sha256": "39926084d8de8dc06c4d683e4943c5090ed15df1d1938dbab2b3f8386deb6fee",
+  "utc_finished": "2026-09-09T13:19:24.693707+00:00"
+}

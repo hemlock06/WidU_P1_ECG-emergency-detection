@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "run_id": "9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7",
+  "utc": "2026-09-09T13:46:15.383552+00:00",
+  "raw_sha256": "39926084d8de8dc06c4d683e4943c5090ed15df1d1938dbab2b3f8386deb6fee",
+  "script_sha256": "9a92266729105a69ea576e4aef0e7b837b93780b1c4e7f5026101ab015ff2653",
+  "checks": [
+    {
+      "leads": "0;3;6;8;11",
+      "status": "passed",
+      "maximum_probability_error": 0.0,
+      "prediction_path": "outputs/electrode_coverage_v1/9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7/restart_parity/1788961556079362300/0-3-6-8-11.npz",
+      "prediction_sha256": "4e87a6fe62f7ed93586b968fa2c106b83db828c0b078ede97521f88707fa4b66",
+      "source_prediction_sha256": "4e87a6fe62f7ed93586b968fa2c106b83db828c0b078ede97521f88707fa4b66"
+    },
+    {
+      "leads": "0;3;6;9;10",
+      "status": "passed",
+      "maximum_probability_error": 0.0,
+      "prediction_path": "outputs/electrode_coverage_v1/9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7/restart_parity/1788961556079362300/0-3-6-9-10.npz",
+      "prediction_sha256": "495d97c29b73e472b5370e136e350fd012c8ea2fbb81367fb1f87011309adea4",
+      "source_prediction_sha256": "495d97c29b73e472b5370e136e350fd012c8ea2fbb81367fb1f87011309adea4"
+    },
+    {
+      "leads": "0;1;2;3;4;5;6;7;8;9;10;11",
+      "status": "passed",
+      "maximum_probability_error": 0.0,
+      "prediction_path": "outputs/electrode_coverage_v1/9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7/restart_parity/1788961556079362300/0-1-2-3-4-5-6-7-8-9-10-11.npz",
+      "prediction_sha256": "ffd21719e01233c529a5d70bd77244d6938e7fd87252f961ac49ba88f2e627bf",
+      "source_prediction_sha256": "b45e21c9f0fe6072767bfd9f55a4d70c48703c024a26b76ac88d0e7002c41751"
+    }
+  ],
+  "scope": "Replay last pre-interruption, first resumed, and 12-lead predictions; not every-combination replay"
+}

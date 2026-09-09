@@ -1,0 +1,43 @@
+{
+  "status": "selection_complete_pending_stability_and_bootstrap",
+  "run_id": "9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7",
+  "raw_sha256": "39926084d8de8dc06c4d683e4943c5090ed15df1d1938dbab2b3f8386deb6fee",
+  "script_sha256": "318f0aa8293e6cde6861413d9b9b85ee0a9aa75f85b2759abca696a1b55781db",
+  "audit_sha256": "50a17b8a794f7da107cb22b2adb38dc6b235eddc16dec0f66a39da6e13f5e14f",
+  "files": {
+    "summary.csv": {
+      "sha256": "c407c53a5ce5f37ff39ca8d937e10e4a4f24d7061a6b7a32ef9a34018a70470f",
+      "rows": 4095
+    },
+    "pareto.csv": {
+      "sha256": "db40a9bc7b859dac48f661ffe6718b3923669a12650fec193ea9e2a2ea3ea35c",
+      "rows": 44
+    },
+    "contact_winners.csv": {
+      "sha256": "492155bc84ec80a8418bb2723ee43b8fb7d09ad3383870eb59e8ffc9bd75d877",
+      "rows": 16
+    },
+    "shortlist.csv": {
+      "sha256": "70fa0306526e4c397c78b2c9dfcf57488b6a4faefaf989ad31c0d5533cc8688b",
+      "rows": 8
+    },
+    "complete_physical_configurations.csv": {
+      "sha256": "f096ae806b4461ac18f1bc70fa46d5b61b056f30d037f470adb6d43845f8423d",
+      "rows": 67
+    },
+    "coverage_grid.csv": {
+      "sha256": "a21062de6631cb40bc23ae882a0092a4c735956289025e328c748bea9fd5d7a2",
+      "rows": 20475
+    }
+  },
+  "grid": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "shortlist_count": 8,
+  "macro_exact_tie_rule": "lexicographic lead indices",
+  "scope": "Exploratory selection; test-selected ROC thresholds; not clinical coverage"
+}

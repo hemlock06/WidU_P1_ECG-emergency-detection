@@ -23,7 +23,7 @@ evidence and its limits; file presence is not proof of clinical validity or off-
   values, but did not retain each realization's record-level probabilities. This is an
   explicit evidence limit; reconstructing those probabilities would require a new logged rerun.
 
-## Active experiment: electrode coverage v1, 2026-09-09
+## Completed internal experiment: electrode coverage v1, 2026-09-09
 
 - Protocol frozen before new outcomes: `records/electrode_coverage_protocol_v1.md`.
 - Runner: `scripts/evaluate_electrode_coverage.py`.
@@ -87,5 +87,29 @@ Push remains held for final review.
   40250 independently recalculated metrics, unchanged parent identity, no orphan files.
 - The first1610 raw rows remained byte-identical after restart. Cause of process loss
   remains unknown; a stale running flag is not evidence of a live process.
-- Restart boundary replay and full4095 audit/selection/repeats/intervals are still pending.
-  New scripts preserve probabilities and require final analysis review before stage2.
+- At the preparation milestone, restart replay and full4095 audit/selection/repeats/intervals
+  were pending. They subsequently passed the checks recorded below.
+
+## Expanded results and final numerical review, 2026-09-09
+
+- Expanded inference finished22:19:24 KST:4095 subsets,794 imported and3301 new,
+  failure events0, external interruption1. The interruption cause remains unknown.
+- `results/electrode_coverage_v1/restart_parity.json`: both restart-boundary cases
+  and12-lead full936 predictions replayed with maximum probability error0.
+- `independent_audit.json`:4095 NPZ and102375 metrics checked; maximum error3.33e-16.
+- `analysis.json`, six selection CSVs:44 Pareto rows,67 complete physical configurations,
+  20475 coverage-grid rows and8 shortlisted configurations including12-lead.
+- `stability_raw.csv` and `stability_status.json`:80 seed30000–30009 realizations,
+  all record-level NPZ preserved. `candidate_analysis.json`:144 summaries/144 paired
+  intervals (2000 record draws, seed31415, skips0 for each candidate).
+- `final_analysis_verification.json`: separate NumPy tied-rank ROC/bincount computation
+  reproduced2000 repeated metrics, all summaries and intervals; separately checked
+  Pareto, coverage and selection. No orphan/missing expanded or repeat predictions.
+- `report.md`: manuscript-oriented methods/results/tradeoffs/limitations and timing.
+  `artifact_manifest.json`:28 result/source/test files with SHA256 and byte counts.
+- New final verifier tests plus existing electrode tests:13 passed,2.55 seconds;
+  Ruff passed. Source scripts are additive; frozen inference/protocol unchanged.
+- V1+V2 uses five measurement contacts and reaches all four0.50 sensitivity floors
+  at seed42, but ectopy Sens95 averages0.470732 over ten feature-mask seeds. This is
+  not stable four-disease coverage or measured wearable validity. All selected
+  non-baseline Macro-F1 difference intervals include zero. External validation remains pending.
