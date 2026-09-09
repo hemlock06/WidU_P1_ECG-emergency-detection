@@ -1,0 +1,14 @@
+{
+  "status": "remote_verified",
+  "time_utc": "2026-09-09T16:42:33.200466+00:00",
+  "scientific_commit": "013978df7c3a28c616ce0e60a863a0356a658298",
+  "branch": "experiment/electrode-coverage",
+  "release": "https://github.com/hemlock06/WidU_P1_LoRA-PEFT_Foundation-Model_Adaptation/releases/tag/p1-research-20260910",
+  "asset_sha256": "9a5030f601e8d2b314170d619f6eff6cdc33e1e2a712376b5ddcfc63206d9b40",
+  "asset_bytes": 113678927,
+  "downloaded_member_hashes_verified": 4986,
+  "primary_code_csv_and_reports_pushed": true,
+  "source_waveforms_and_weights_in_archive": false,
+  "private_conversation_in_archive": false,
+  "notes": "Research archive only. Default full tests retain two legacy setup errors; scoped compatibility run passed39. Generated SVG whitespace retained without visual/data changes."
+}
