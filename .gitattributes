@@ -39,3 +39,9 @@ scripts/prepare_ptbxl_metadata.py -text
 tests/test_pretraining_exposure.py -text
 results/classification_counts_20260910/** -text
 scripts/report_classification_counts.py -text
+records/paper_synthesis_20260910.md -text
+results/paper_package_20260910/** -text
+results/vfdb_readiness_20260910/** -text
+scripts/audit_vfdb_readiness.py -text
+scripts/build_paper_package.py -text
+scripts/verify_paper_publication.py -text

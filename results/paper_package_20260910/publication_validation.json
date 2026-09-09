@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "candidate_rows": 8,
+  "disease_rows": 40,
+  "archive_members_hashed": 4986,
+  "all_primary_csv_prediction_links_present": true,
+  "vfdb_source_hashes": 67,
+  "vfdb_raw_header_seconds": 46200.0,
+  "outgoing_preexisting_paths_secret_pattern_checked": 120,
+  "secret_pattern_hits": [],
+  "secret_scan_limit": "High-specificity key patterns; not universal privacy certification.",
+  "initial_default_tests": "37 passed, 2 legacy weights-only setup errors",
+  "scoped_numpy_safe_globals_tests": "39 passed in 4.01s; original checkpoint SHA verified",
+  "initial_packaging_failure": "Unsupported manifest wrapper; schema handling fixed before successful packaging",
+  "initial_publication_verifier_failure": "Historical CSV has fingerprint/model/subset-derived path; explicit reconstruction added",
+  "visual_checks": "Both PNG figures opened; labels, units and captions legible",
+  "new_training_runs": 0,
+  "clinical_or_external_validation": false
+}

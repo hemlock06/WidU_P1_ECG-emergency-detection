@@ -1,0 +1,49 @@
+{
+  "status": "format_and_annotation_readiness_verified_not_model_validation",
+  "time_utc": "2026-09-09T16:28:15.804404+00:00",
+  "records": 22,
+  "files_hashed": 67,
+  "waveform_checksums_passed": 22,
+  "total_record_seconds": 46200.0,
+  "channels": [
+    2
+  ],
+  "sample_rates": [
+    250
+  ],
+  "channel_names": [
+    "ECG;ECG"
+  ],
+  "annotations": 592,
+  "raw_aux_counts": {
+    "(AFIB": 9,
+    "(ASYS": 13,
+    "(B": 12,
+    "(BI": 22,
+    "(HGEA": 19,
+    "(N": 216,
+    "(NOD": 6,
+    "(NOISE": 73,
+    "(NSR": 2,
+    "(PM": 5,
+    "(SBR": 2,
+    "(SVTA": 6,
+    "(VER": 3,
+    "(VF": 9,
+    "(VFIB": 4,
+    "(VFL": 98,
+    "(VT": 93
+  },
+  "failures": 0,
+  "skips": 0,
+  "new_training_runs": 0,
+  "model_inferences": 0,
+  "limitations": [
+    "Raw change-marker counts are not adjudicated independent clinical events.",
+    "Noise markers do not terminate the underlying rhythm; no episode labels generated here.",
+    "Generic ECG channel names do not establish standard lead or electrode geometry.",
+    "Patient-level independence, full pretraining/adaptation exposure and pulse status unresolved.",
+    "Selected abnormal recordings do not validate seven-day false-alert rates.",
+    "Page describes half-hour records; use header-derived lengths for actual duration."
+  ]
+}

@@ -1,5 +1,19 @@
 # Research evidence index
 
+## Current synthesis and publication package — 2026-09-10
+
+- `records/paper_synthesis_20260910.md` joins decisions, rejected alternatives,
+  completed results and manuscript implications across the full research sequence.
+- `results/paper_package_20260910/` contains exact-source tables, exportable figures,
+  all4986 available prediction-file hashes and publication validation records.
+- `results/vfdb_readiness_20260910/` verifies67 official files,22 waveforms and raw
+  rhythm annotations. This is expansion readiness, not a trained VT/VF detector.
+- The user authorized publication after verification on September10. Historical
+  below-mentioned push holds record the state at those earlier milestones.
+- Follow the publication receipt for actual remote commit/asset verification;
+  no independent external performance or seven-day wearable results exist here.
+
+
 Purpose: preserve an auditable path from manuscript claims and tables to the exact
 experiment, code, model, input records and predictions. This index describes retained
 evidence and its limits; file presence is not proof of clinical validity or off-device backup.

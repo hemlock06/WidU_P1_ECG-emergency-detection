@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "candidate_rows": 8,
+  "disease_rows": 40,
+  "prior_manifest_files_checked": {
+    "electrode_coverage_v1": 28,
+    "stage2_lineage": 8,
+    "pretraining_exposure_20260910": 9,
+    "classification_counts_20260910": 6
+  },
+  "raw_prediction_files": 4986,
+  "raw_prediction_bytes": 111090064,
+  "archive": "work/paper_release_20260910/p1-predictions-20260910.zip",
+  "archive_bytes": 113678927,
+  "archive_sha256": "9a5030f601e8d2b314170d619f6eff6cdc33e1e2a712376b5ddcfc63206d9b40",
+  "archive_member_hash_checks": 4986,
+  "new_model_inferences": 0,
+  "new_training_runs": 0,
+  "scope": "Publication packaging and source-byte verification; prior numerical audits retained."
+}
