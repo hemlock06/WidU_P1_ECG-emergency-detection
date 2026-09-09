@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "results/classification_counts_20260910/cohort_accuracy.csv",
+      "sha256": "b0501c09135679e6c8fa16761d53aef2dedf3e79c244a6cecda55f061fc544d7",
+      "bytes": 580746
+    },
+    {
+      "path": "results/classification_counts_20260910/disease_counts.csv",
+      "sha256": "bae2f57fc8d4ed908dedec4283e25a376a705c8b2f5be45fa9207a576adfd91c",
+      "bytes": 4489790
+    },
+    {
+      "path": "results/classification_counts_20260910/raw_record_durations.csv",
+      "sha256": "c9f00ec7b624d835cf02a510f53c31a8267a8ab3902f367c6e9e6bfc95f6232a",
+      "bytes": 533174
+    },
+    {
+      "path": "results/classification_counts_20260910/report.md",
+      "sha256": "b5877ce85c9e57338d9c2ac46058e894eb4a31b8c73e248cb3f7a331c8fa98d6",
+      "bytes": 4878
+    },
+    {
+      "path": "results/classification_counts_20260910/verification.json",
+      "sha256": "6bf0bcb5e9a451f8f4549fff2c4d1861fbf02c84cb4da2ab0debf7b46c04f18f",
+      "bytes": 1853
+    },
+    {
+      "path": "scripts/report_classification_counts.py",
+      "sha256": "505bea255fc08c00f7754a171ada8a7689a216a1fb64bb0932ab6c865f4bb9dc",
+      "bytes": 7098
+    }
+  ]
+}

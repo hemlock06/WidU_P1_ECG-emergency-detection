@@ -147,3 +147,17 @@ Push remains held for final review.
   This is not an eligible independent cohort and no model outcomes were inspected.
 - New audit/preparation scripts, three passing schema tests, source fingerprints
   and complete membership tables preserve the finding. Frozen results unchanged.
+
+## Interpretable classification counts and duration, 2026-09-10
+
+- `results/classification_counts_20260910/`:4175 accuracy rows,20875 class-count
+  rows,6877 raw-header durations/hashes, verification and report. All stored NPZ
+  hashes/IDs checked; NumPy and sklearn confusion counts agree and reproduce F1.
+- Five-contact II+aVR+V1+V2 seed42:723/936 correct (77.24%); ten-repeat mean76.98%.
+  Ectopy30/82 found,52 missed,36 wrongly assigned, exposing the aggregate's limit.
+  Counts use argmax, not the test-selected Sens@95Sp operating point.
+- Test input nominal duration2h36m across936 records; all local raw CPSC totals
+  about30h28m across6877 short recordings. Neither is a seven-day person trajectory.
+  Classification FP is not a clinical alert or a false-alert-per-day estimate.
+- Continuous seven-day validation and episode/alert/usable-wear-time metrics remain
+  part of the external/wearable preparation. No new GPU inference or training.

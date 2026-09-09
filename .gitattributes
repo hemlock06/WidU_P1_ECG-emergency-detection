@@ -37,3 +37,5 @@ results/pretraining_exposure_20260910/** -text
 scripts/audit_pretraining_exposure.py -text
 scripts/prepare_ptbxl_metadata.py -text
 tests/test_pretraining_exposure.py -text
+results/classification_counts_20260910/** -text
+scripts/report_classification_counts.py -text

@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "prediction_files_checked": 4175,
+  "cohort_rows": 4175,
+  "disease_rows": 20875,
+  "classification_rule": "argmax of five class probabilities, no threshold optimization",
+  "false_positive_unit": "10-second record classification, not clinical alert or episode",
+  "test_records": 936,
+  "test_shape": [
+    936,
+    12,
+    5000
+  ],
+  "sample_rate_hz": 500,
+  "model_window_seconds": 10,
+  "test_input_seconds_including_padding": 9360,
+  "test_actual_signal_seconds_within_model_windows": 9358.998,
+  "raw_all_records": 6877,
+  "raw_all_seconds": 109674.97600000029,
+  "raw_min_seconds": 6.0,
+  "raw_max_seconds": 144.0,
+  "raw_test_full_record_seconds": 14470.549999999996,
+  "seven_days_seconds_per_person": 604800,
+  "seven_days_nonoverlapping_10_second_windows_per_person": 60480,
+  "unique_people_verified": false,
+  "seven_day_continuity_available_in_this_cohort": false,
+  "sources": [
+    {
+      "path": "results/electrode_coverage_v1/raw.csv",
+      "sha256": "39926084d8de8dc06c4d683e4943c5090ed15df1d1938dbab2b3f8386deb6fee"
+    },
+    {
+      "path": "results/electrode_coverage_v1/stability_raw.csv",
+      "sha256": "6ce1d54770e990862d0dafea96e793ebb935de2269c820f7b54ba23e36752c93"
+    }
+  ],
+  "labels_sha256": "552630f68b169de1605c672424166b5432035e46c86c5d81debe6e8ccfeb9e5b",
+  "ids_sha256": "4c6be29268e2270e9e46537b517260446451f92141c525f1631f225c23312218",
+  "script_sha256": "505bea255fc08c00f7754a171ada8a7689a216a1fb64bb0932ab6c865f4bb9dc",
+  "new_gpu_inferences": 0,
+  "failures": 0,
+  "skips": 0,
+  "limitations": "Same exploratory cohort; known published SSL exposure and unresolved warm lineage remain. Counts are against the historical single-label reference, not patient diagnoses, event detection, false alerts per day or seven-day performance."
+}
