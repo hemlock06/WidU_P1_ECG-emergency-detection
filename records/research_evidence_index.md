@@ -16,7 +16,7 @@ evidence and its limits; file presence is not proof of clinical validity or off-
 - Verification: `results/exhaustive_lead_subsets_{verification,analysis_verification}.json`.
 - Environment/timing/tests: `results/lead_subset_completion_validation.md` and recovery audits.
 - Negative results: `results/exhaustive_lead_subsets_failures/`, controls.json,
-  `results/control_attempts/`. Single historical realization failed tolerance; separate
+  `results/control_attempts/`. Single historical realization failed tolerance; a
   separately defined stochastic gate passed. The protocol was written before calibration,
   then committed while calibration was running; this was not public preregistration.
 - The ten-seed candidate stability experiment retained per-realization metrics and seed
@@ -77,3 +77,15 @@ Push remains held for final review.
   inaccurate; it was a pre-exhaustive-run commit. Original artifacts remain unchanged.
 - The new dossier is retrospective and does not turn completed exploratory work into a
   prospective study or make the ongoing4095 experiment complete.
+
+## Interruption and postprocessing preparation, 2026-09-09
+
+- `records/electrode_postprocessing_readiness_20260909.md`: one externally observed
+  process interruption, independent saved-result audit, identical-condition restart,
+  new postprocessing scripts and tested versus pending execution scope.
+- `results/electrode_resume_audit_20260909_1748.json`:1610 saved prediction files,
+  40250 independently recalculated metrics, unchanged parent identity, no orphan files.
+- The first1610 raw rows remained byte-identical after restart. Cause of process loss
+  remains unknown; a stale running flag is not evidence of a live process.
+- Restart boundary replay and full4095 audit/selection/repeats/intervals are still pending.
+  New scripts preserve probabilities and require final analysis review before stage2.

@@ -1,0 +1,16 @@
+{
+  "status": "passed_for_resume",
+  "utc": "2026-09-09T08:47:12.849534+00:00",
+  "run_id": "9dd890a3b933b877aaad4b8cfef1d5c589c46d48e39edb8f936cc75617d345c7",
+  "saved_rows": 1610,
+  "imported_rows": 794,
+  "new_rows": 816,
+  "remaining_rows": 2485,
+  "raw_sha256": "789650dc1e8ee4ca1cbfa800df31980c1b9ca6653a04453b481b546ea2cf0303",
+  "checked_metrics": 40250,
+  "maximum_absolute_error": 3.3306690738754696e-16,
+  "orphan_npz": 0,
+  "parent_identity_unchanged": true,
+  "interruption": "Process absent, original exec session unknown, log stopped without traceback; cause unconfirmed",
+  "scope": "Independent saved-result audit before identical-condition resume; no data/model modification"
+}
