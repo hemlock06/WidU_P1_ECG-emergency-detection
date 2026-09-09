@@ -1,0 +1,10 @@
+{
+  "hostname": "메인컴퓨터",
+  "time": "2026-09-09T23:57:25.0416889+09:00",
+  "source_root": "D:\\WidU_ecg-fm_emergency-detection",
+  "exists": false,
+  "scope": "Historical path from initial Git source; read-only file metadata",
+  "files": [],
+  "job": "20260910-p1-stage2-legacy-root-inventory-01",
+  "result_sha256": "a66014f2e6dc28e32cb69b0a0ab2329f589c8b579ebe28c9a2345c0b75c52fdd"
+}

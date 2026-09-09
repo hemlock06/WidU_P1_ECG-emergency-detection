@@ -128,3 +128,6 @@ Push remains held for final review.
   integrity is not patient-level or upstream-training independence.
 - `scripts/audit_stage2_lineage.py` and four passing tests preserve the checks.
   No new training/inference; all completed electrode artifacts remain unchanged.
+- `search_update.md` and `legacy_directory_inventory.json` supersede the pending
+  historical-directory status: home host reported that directory absent23:57:25 KST.
+  Further preparation must audit external-dataset exposure during backbone pretraining.
