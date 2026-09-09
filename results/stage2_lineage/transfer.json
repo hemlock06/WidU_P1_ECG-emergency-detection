@@ -1,0 +1,68 @@
+{
+  "job": "20260909-p1-stage2-lineage-assets-01",
+  "source_root": "D:\\WidU_ecg-fm_emergency-detection_git",
+  "hostname": "메인컴퓨터",
+  "source_time": "2026-09-09T23:03:25.3246132+09:00",
+  "result_sha256": "67944770bc7610be20ee6e36b9cc4dd01f599c95f541758adf3eca469c164039",
+  "files": [
+    {
+      "relative_path": "data/processed/cpsc2018_mc/train/record_ids.npy",
+      "bytes": 391740,
+      "sha256": "ee75e00abcd469de639210eeb8f8bd67d2d73cd9c9127c7766c7947d564a0751",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018_mc/train/record_ids.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018_mc/train/labels.npy",
+      "bytes": 4485,
+      "sha256": "37fe8056f66ae6fda3f297b0209cf6aa90e00a67cebb40d381454760f5f5b402",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018_mc/train/labels.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018_mc/train/labels_bin.npy",
+      "bytes": 4485,
+      "sha256": "869a13434bef4bd42d6c3d8faf07e2191dbfc42d27a44ebde2ecb887873866d8",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018_mc/train/labels_bin.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018_mc/val/record_ids.npy",
+      "bytes": 83572,
+      "sha256": "587e2f3173a65a7fa354cb1569d14c146d1820bd3157d7b569ae6fb45632ca5c",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018_mc/val/record_ids.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018_mc/val/labels.npy",
+      "bytes": 1061,
+      "sha256": "cc905c440971a314ae8d13e3eec38a1c033def1f86804ece08350a0d6e71d37f",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018_mc/val/labels.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018_mc/val/labels_bin.npy",
+      "bytes": 1061,
+      "sha256": "efc67074b488cc0a3175141eee5e1cbb26a3885b7fcae38a92fb6954ea50f54c",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018_mc/val/labels_bin.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018/train/record_ids.npy",
+      "bytes": 199136,
+      "sha256": "a742fa56190416ebc3f18e8368ed21bb901d017119abc474b261c2c04e41a44b",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018/train/record_ids.npy",
+      "verified": true
+    },
+    {
+      "relative_path": "data/processed/cpsc2018/val/record_ids.npy",
+      "bytes": 42262,
+      "sha256": "91d712cfe7ef5c610429e1e91bd00dc87429fb1cb6dee198ee67fdc43a4919b7",
+      "destination": "work/stage2_original_assets/data/processed/cpsc2018/val/record_ids.npy",
+      "verified": true
+    }
+  ],
+  "missing": [
+    "outputs/lora_multitask/lora_multitask_best.pt"
+  ]
+}

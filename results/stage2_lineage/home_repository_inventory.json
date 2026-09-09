@@ -1,0 +1,110 @@
+{
+  "hostname": "메인컴퓨터",
+  "time": "2026-09-09T23:51:28.3861401+09:00",
+  "source_root": "D:\\WidU_ecg-fm_emergency-detection_git",
+  "scope": "P1 repository files with pt,pth,zip,7z extensions; metadata only, no files changed",
+  "files": [
+    {
+      "relative_path": ".venv-hsic-demo\\Lib\\site-packages\\distutils-precedence.pth",
+      "bytes": 151,
+      "modified": "2026-07-23T13:23:26.2484575+09:00"
+    },
+    {
+      "relative_path": ".venv-hsic-demo\\Lib\\site-packages\\pkg_resources\\tests\\data\\my-test-package-zip\\my-test-package.zip",
+      "bytes": 1809,
+      "modified": "2026-07-23T13:23:26.2629771+09:00"
+    },
+    {
+      "relative_path": "checkpoints\\ecg-fm\\mimic_iv_ecg_finetuned.pt",
+      "bytes": 1081641499,
+      "modified": "2026-05-24T23:52:27.7234805+09:00"
+    },
+    {
+      "relative_path": "checkpoints\\ecg-fm\\mimic_iv_ecg_physionet_pretrained.pt",
+      "bytes": 1090825421,
+      "modified": "2026-05-24T23:52:24.8954447+09:00"
+    },
+    {
+      "relative_path": "outputs\\gate\\gate_best.pt",
+      "bytes": 4900,
+      "modified": "2026-05-25T22:52:51.7934776+09:00"
+    },
+    {
+      "relative_path": "outputs\\gate\\reliability_head.pt",
+      "bytes": 209634,
+      "modified": "2026-05-30T18:49:09.3345706+09:00"
+    },
+    {
+      "relative_path": "outputs\\gate\\reliability_head_det.pt",
+      "bytes": 209546,
+      "modified": "2026-05-30T20:51:31.5215818+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multisnr\\lora_multisnr_best.pt",
+      "bytes": 1200146,
+      "modified": "2026-05-25T16:15:09.4665099+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multisnr_mixed\\lora_multisnr_best.pt",
+      "bytes": 1200210,
+      "modified": "2026-06-06T21:07:05.0974585+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multitask_mixed\\lora_multitask_snr_best.pt",
+      "bytes": 364840204,
+      "modified": "2026-06-07T00:11:24.8336026+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multitask_single_cold\\lora_multitask_snr_best.pt",
+      "bytes": 364840204,
+      "modified": "2026-06-07T04:01:59.6601577+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multitask_single_cold\\resume.pt",
+      "bytes": 1252882,
+      "modified": "2026-06-07T04:17:45.9448960+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multitask_snr_a07\\lora_multitask_snr_best.pt",
+      "bytes": 364840844,
+      "modified": "2026-05-29T04:40:12.0700469+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multitask_sph_mixed\\lora_multitask_snr_best.pt",
+      "bytes": 364840204,
+      "modified": "2026-06-07T02:11:37.2367542+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_multitask_sph_mixed\\resume.pt",
+      "bytes": 1252946,
+      "modified": "2026-06-07T03:33:56.2549229+09:00"
+    },
+    {
+      "relative_path": "outputs\\lora_no_rlm\\lora_multisnr_best.pt",
+      "bytes": 1200146,
+      "modified": "2026-06-03T12:21:19.1818849+09:00"
+    },
+    {
+      "relative_path": "outputs\\mt_mixed_temporal\\lora_multitask_snr_best.pt",
+      "bytes": 364840204,
+      "modified": "2026-06-08T01:00:26.3836841+09:00"
+    },
+    {
+      "relative_path": "outputs\\mt_mixed_temporal\\resume.pt",
+      "bytes": 1252882,
+      "modified": "2026-06-08T01:00:26.3907040+09:00"
+    },
+    {
+      "relative_path": "outputs\\mt_mixed_uniform\\lora_multitask_snr_best.pt",
+      "bytes": 364840204,
+      "modified": "2026-06-08T02:57:58.1799924+09:00"
+    },
+    {
+      "relative_path": "outputs\\mt_mixed_uniform\\resume.pt",
+      "bytes": 1262666,
+      "modified": "2026-06-08T03:06:16.0865357+09:00"
+    }
+  ],
+  "job": "20260909-p1-stage2-checkpoint-inventory-01",
+  "result_sha256": "6bb859320a8e22cbce7cad6e0817d190761ca92304645d358ebde370de32f700"
+}

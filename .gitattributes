@@ -28,3 +28,8 @@ scripts/verify_electrode_restart_parity.py -text
 records/electrode_coverage_protocol_v1.md -text
 tests/test_electrode_final_verifier.py -text
 results/electrode_coverage_v1/artifact_manifest.json -text
+
+# Preserve historical split audit provenance bytes.
+results/stage2_lineage/** -text
+scripts/audit_stage2_lineage.py -text
+tests/test_stage2_lineage.py -text

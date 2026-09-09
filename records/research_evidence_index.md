@@ -113,3 +113,18 @@ Push remains held for final review.
   at seed42, but ectopy Sens95 averages0.470732 over ten feature-mask seeds. This is
   not stable four-disease coverage or measured wearable validity. All selected
   non-baseline Macro-F1 difference intervals include zero. External validation remains pending.
+
+## Historical split recovery and lineage audit, 2026-09-09
+
+- `results/stage2_lineage/transfer.json`: eight original train/validation arrays
+  copied with source/destination hashes verified; requested 5d warm checkpoint missing.
+- `split_audit.json`, `overlap_matrix.csv`, `mc_test_binary_overlap_ids.csv`:
+  original mc4357/933/936 and binary2217/474/474 have no within-dataset split overlap.
+  Original mc test overlaps binary train343/validation65/test67. Inheritance of
+  binary-trained weights into the final model is unresolved; overlap alone does not
+  establish leakage. Regenerated mc_ml overlap672/125/139 reconfirmed.
+- `report.md`, `home_repository_inventory.json`: search scope, checkpoint key list,
+  missing warm identity and next historical-directory recovery step. Record-level
+  integrity is not patient-level or upstream-training independence.
+- `scripts/audit_stage2_lineage.py` and four passing tests preserve the checks.
+  No new training/inference; all completed electrode artifacts remain unchanged.

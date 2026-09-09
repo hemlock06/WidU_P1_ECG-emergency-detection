@@ -1,0 +1,240 @@
+{
+  "status": "split_integrity_passed_training_lineage_unresolved",
+  "time_utc": "2026-09-09T14:55:20.250555+00:00",
+  "scope": "Record IDs only; no patient-level or signal-duplicate independence claim",
+  "source_transfer_sha256": "2f8c9a2594d1c8267712fe0bdbb14f35d591a4d167bb579ebcfe79696c4fad9e",
+  "audit_script_sha256": "c6d12534235f4b0d86565c1fcb1bc6e868042e12df61cb4ee3f60cf02d1c68c3",
+  "counts": {
+    "original/cpsc2018_mc/train": {
+      "n": 4357,
+      "unique": 4357,
+      "class_counts": [
+        640,
+        820,
+        755,
+        1770,
+        372
+      ],
+      "binary_counts": [
+        2782,
+        1575
+      ]
+    },
+    "original/cpsc2018_mc/val": {
+      "n": 933,
+      "unique": 933,
+      "class_counts": [
+        136,
+        176,
+        163,
+        379,
+        79
+      ],
+      "binary_counts": [
+        594,
+        339
+      ]
+    },
+    "original/cpsc2018_mc/test": {
+      "n": 936,
+      "unique": 936,
+      "class_counts": [
+        130,
+        180,
+        165,
+        379,
+        82
+      ],
+      "binary_counts": [
+        591,
+        345
+      ]
+    },
+    "original/cpsc2018/train": {
+      "n": 2217,
+      "unique": 2217
+    },
+    "original/cpsc2018/val": {
+      "n": 474,
+      "unique": 474
+    },
+    "original/cpsc2018/test": {
+      "n": 474,
+      "unique": 474
+    },
+    "regenerated/cpsc2018_mc_ml/train": {
+      "n": 4813,
+      "unique": 4813
+    },
+    "regenerated/cpsc2018_mc_ml/val": {
+      "n": 1031,
+      "unique": 1031
+    },
+    "regenerated/cpsc2018_mc_ml/test": {
+      "n": 1033,
+      "unique": 1033
+    },
+    "regenerated/cpsc2018_regenerated_20260908/train": {
+      "n": 2233,
+      "unique": 2233
+    },
+    "regenerated/cpsc2018_regenerated_20260908/val": {
+      "n": 478,
+      "unique": 478
+    },
+    "regenerated/cpsc2018_regenerated_20260908/test": {
+      "n": 480,
+      "unique": 480
+    }
+  },
+  "source_files": [
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018_mc/train/record_ids.npy",
+      "bytes": 391740,
+      "sha256": "ee75e00abcd469de639210eeb8f8bd67d2d73cd9c9127c7766c7947d564a0751"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018_mc/train/labels.npy",
+      "bytes": 4485,
+      "sha256": "37fe8056f66ae6fda3f297b0209cf6aa90e00a67cebb40d381454760f5f5b402"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018_mc/train/labels_bin.npy",
+      "bytes": 4485,
+      "sha256": "869a13434bef4bd42d6c3d8faf07e2191dbfc42d27a44ebde2ecb887873866d8"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018_mc/val/record_ids.npy",
+      "bytes": 83572,
+      "sha256": "587e2f3173a65a7fa354cb1569d14c146d1820bd3157d7b569ae6fb45632ca5c"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018_mc/val/labels.npy",
+      "bytes": 1061,
+      "sha256": "cc905c440971a314ae8d13e3eec38a1c033def1f86804ece08350a0d6e71d37f"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018_mc/val/labels_bin.npy",
+      "bytes": 1061,
+      "sha256": "efc67074b488cc0a3175141eee5e1cbb26a3885b7fcae38a92fb6954ea50f54c"
+    },
+    {
+      "path": "data/processed/cpsc2018_mc/test/record_ids.npy",
+      "bytes": 83842,
+      "sha256": "4c6be29268e2270e9e46537b517260446451f92141c525f1631f225c23312218"
+    },
+    {
+      "path": "data/processed/cpsc2018_mc/test/labels.npy",
+      "bytes": 1064,
+      "sha256": "552630f68b169de1605c672424166b5432035e46c86c5d81debe6e8ccfeb9e5b"
+    },
+    {
+      "path": "data/processed/cpsc2018_mc/test/labels_bin.npy",
+      "bytes": 1064,
+      "sha256": "b302dc77e5f59e1f8ec3ff226870716c90290467259052e7ce6cfa70d6b7c5a0"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018/train/record_ids.npy",
+      "bytes": 199136,
+      "sha256": "a742fa56190416ebc3f18e8368ed21bb901d017119abc474b261c2c04e41a44b"
+    },
+    {
+      "path": "work/stage2_original_assets/data/processed/cpsc2018/val/record_ids.npy",
+      "bytes": 42262,
+      "sha256": "91d712cfe7ef5c610429e1e91bd00dc87429fb1cb6dee198ee67fdc43a4919b7"
+    },
+    {
+      "path": "data/processed/cpsc2018/test/record_ids.npy",
+      "bytes": 42262,
+      "sha256": "bd65466e9bfb617744296957badce80629c354cdccec833ad29962133dda26f4"
+    },
+    {
+      "path": "data/processed/cpsc2018_mc_ml/train/record_ids.npy",
+      "bytes": 432780,
+      "sha256": "60228e2d120cbd072d9c2be28cdec0d4860b4e9e7b0e0567300d654064208845"
+    },
+    {
+      "path": "data/processed/cpsc2018_mc_ml/val/record_ids.npy",
+      "bytes": 92394,
+      "sha256": "adb887d7e1bdb0e33f95cd9397f7811630e9a787eb7f407328fdf3b39f76d772"
+    },
+    {
+      "path": "data/processed/cpsc2018_mc_ml/test/record_ids.npy",
+      "bytes": 92574,
+      "sha256": "faf34a84bb8d65eb48325fc8be4a1db232bd34180689ccbd88a080dcc5d450ac"
+    },
+    {
+      "path": "data/processed/cpsc2018_regenerated_20260908/train/record_ids.npy",
+      "bytes": 200576,
+      "sha256": "ce7c637ac3d265c9d3726b64d3027ad095191d6ff8a1c4097dab067f010fd44c"
+    },
+    {
+      "path": "data/processed/cpsc2018_regenerated_20260908/val/record_ids.npy",
+      "bytes": 42622,
+      "sha256": "8bda69aa86ee516406905b8968216521418170817496a0ecb0850d6d6de3748f"
+    },
+    {
+      "path": "data/processed/cpsc2018_regenerated_20260908/test/record_ids.npy",
+      "bytes": 42802,
+      "sha256": "fc1a4931414de6576c83ef4ddefaa4c496030f8d439fa37137002b87d984afec"
+    }
+  ],
+  "original_within_dataset_cross_split_overlap": 0,
+  "mc_test_overlap_binary_splits": {
+    "train": 343,
+    "val": 65,
+    "test": 67
+  },
+  "missing_optional_splits": [],
+  "checkpoint": {
+    "path": "outputs/lora_multitask_snr_a07/lora_multitask_snr_best.pt",
+    "sha256": "287148bfd01ac67b5192268c6c69cc4cc230c004bdfdf332285f38a3b43b08dd",
+    "keys": [
+      "alpha",
+      "backbone_lora",
+      "class_names",
+      "emergency_classes",
+      "epoch",
+      "head_bin_state",
+      "head_mc_state",
+      "lora_alpha",
+      "lora_rank",
+      "n_classes",
+      "val_bin_auroc",
+      "val_composite",
+      "val_macro_f1"
+    ],
+    "metadata": {
+      "epoch": 18,
+      "val_bin_auroc": 0.91039698856808,
+      "val_macro_f1": 0.6998251523427733,
+      "val_composite": 0.8051110704554267,
+      "alpha": 0.7,
+      "lora_rank": 8,
+      "lora_alpha": 16.0,
+      "n_classes": 5,
+      "class_names": [
+        "정상(NSR)",
+        "AF",
+        "급성허혈(STD/STE)",
+        "전도장애(I-AVB/LBBB/RBBB)",
+        "이소성(PAC/PVC)"
+      ],
+      "emergency_classes": [
+        1,
+        2
+      ]
+    }
+  },
+  "lineage_verdict": "Final checkpoint contains no split hash or warm-start identity. Historical defaults/logs describe a 5d warm start, but the requested file is missing. Binary train/test overlap is not itself proof that the final model saw those records.",
+  "missing_requested_assets": [
+    "outputs/lora_multitask/lora_multitask_best.pt"
+  ],
+  "inference_runs": 0,
+  "training_runs": 0,
+  "external_evaluation_gate": "Require upstream training exposure and label protocol audit",
+  "output_hashes": {
+    "overlap_matrix.csv": "f485e36a4abbcf6c297c6b7b7ad59b6269e03f0e033f48f0385affc9a709f1cc",
+    "mc_test_binary_overlap_ids.csv": "af00161261c58d7c27abf37be05fa93624f01b5a78ccf650c7b6e7b4bb10f694"
+  }
+}
