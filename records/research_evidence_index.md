@@ -17,7 +17,8 @@ evidence and its limits; file presence is not proof of clinical validity or off-
 - Environment/timing/tests: `results/lead_subset_completion_validation.md` and recovery audits.
 - Negative results: `results/exhaustive_lead_subsets_failures/`, controls.json,
   `results/control_attempts/`. Single historical realization failed tolerance; separate
-  preregistered-within-repository stochastic gate passed. This was not public preregistration.
+  separately defined stochastic gate passed. The protocol was written before calibration,
+  then committed while calibration was running; this was not public preregistration.
 - The ten-seed candidate stability experiment retained per-realization metrics and seed
   values, but did not retain each realization's record-level probabilities. This is an
   explicit evidence limit; reconstructing those probabilities would require a new logged rerun.
@@ -59,3 +60,20 @@ The restored source assets have external originals as documented in recovery aud
 but newly generated predictions have no independently verified off-device backup yet.
 Do not delete local data on the assumption that a commit or review ZIP contains them.
 Push remains held for final review.
+
+## Retrospective manuscript dossier, 2026-09-09
+
+- `records/paper_retrospective_20260909.md`: motivation, recovery, original failures,
+  protocol amendments, completed results, electrode extension and remaining limitations.
+- `records/paper_related_work_20260909.md`: targeted primary-paper review, including
+  existing exhaustive/electrode-cost work; no absence-of-literature or first-ever claim.
+- `records/paper_history_events_20260909.csv`: selected original conversation timestamps,
+  source lines and hashes; no full private transcript copied into the repository.
+- `records/paper_candidate_table_20260909.csv`: exact source-row candidate metrics.
+- `records/paper_evidence_manifest_20260909.csv` and verification JSON: source fingerprints
+  and checked scope. `scripts/build_paper_evidence.py` regenerates these retrospective tables.
+- Original protocol timing was checked against raw history: written19:05, launched19:07,
+  committed19:12 KST on September8. A prior description of a pre-calibration commit was
+  inaccurate; it was a pre-exhaustive-run commit. Original artifacts remain unchanged.
+- The new dossier is retrospective and does not turn completed exploratory work into a
+  prospective study or make the ongoing4095 experiment complete.

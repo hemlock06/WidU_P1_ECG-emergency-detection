@@ -1,0 +1,19 @@
+{
+  "verified_at_utc": "2026-09-09T07:25:53.237944+00:00",
+  "status": "passed",
+  "source_files_hashed": 59,
+  "selected_history_events": 12,
+  "candidate_rows_copied_exactly": 4,
+  "raw_rows": 1586,
+  "raw_sha256_matches_previous_independent_audit": true,
+  "mc_class_counts": [
+    130,
+    180,
+    165,
+    379,
+    82
+  ],
+  "historical_protocol_timing": "written before calibration; committed during calibration",
+  "scope": "dossier provenance, selected figures and source readback; not a new full prediction audit",
+  "active_experiment_modified": false
+}
