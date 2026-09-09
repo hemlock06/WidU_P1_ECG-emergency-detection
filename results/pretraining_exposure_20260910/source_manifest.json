@@ -1,0 +1,32 @@
+[
+  {
+    "path": "work/exposure_sources_20260910/meta_split_physionet.csv",
+    "url": "https://raw.githubusercontent.com/bowang-lab/ecg-fm/9f926f1911bb9f24789b5c6407677d58ad753054/splits/meta_split_physionet.csv",
+    "bytes": 8597727,
+    "sha256": "a2d17b0485a8186d227e82f2200ceb8b2ba7423df23a4fd306275f2197b4d88d"
+  },
+  {
+    "path": "work/exposure_sources_20260910/splits_README.md",
+    "url": "https://raw.githubusercontent.com/bowang-lab/ecg-fm/9f926f1911bb9f24789b5c6407677d58ad753054/splits/README.md",
+    "bytes": 278,
+    "sha256": "f5c9852566d7b539e8842f8a9b2f60b88676d58202f73e0cc3e41a7abfd24266"
+  },
+  {
+    "path": "work/exposure_sources_20260910/README.md",
+    "url": "https://raw.githubusercontent.com/bowang-lab/ecg-fm/9f926f1911bb9f24789b5c6407677d58ad753054/README.md",
+    "bytes": 5946,
+    "sha256": "8936703f93f03b1a5befeb022a79900f1ae9e1d4842650703896e81ccce1b0ea"
+  },
+  {
+    "path": "work/exposure_sources_20260910/ptbxl_database.csv",
+    "url": "https://physionet.org/files/ptb-xl/1.0.3/ptbxl_database.csv",
+    "sha256": "7600de9c1b27d181d850b3c6038a35d7c3ddb6bb33b702e3a20252a6859d216b",
+    "bytes": 6594879
+  },
+  {
+    "path": "work/exposure_sources_20260910/scp_statements.csv",
+    "url": "https://physionet.org/files/ptb-xl/1.0.3/scp_statements.csv",
+    "sha256": "ad05b0b1fcae83bb1230755ad9cfc7c96f303feddc08a4a9ad5bdc9ca63bac8f",
+    "bytes": 9720
+  }
+]

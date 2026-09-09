@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "results/pretraining_exposure_20260910/audit.json",
+      "bytes": 2728,
+      "sha256": "8a65c3e4788fb1d6c068f7907f6a7fe347e9d1a4007b162a9706007b90789f6b"
+    },
+    {
+      "path": "results/pretraining_exposure_20260910/ptbxl_metadata_readiness.json",
+      "bytes": 2493,
+      "sha256": "71cf66c8c148dbd5336b08ec6a7e679cdb6f321b3169bb07082ae73361a9babb"
+    },
+    {
+      "path": "results/pretraining_exposure_20260910/ptbxl_provisional_membership.csv",
+      "bytes": 609207,
+      "sha256": "e16d33562ada433a81e30e84f638b76a84ba6dd4d5764db21967855126d6c196"
+    },
+    {
+      "path": "results/pretraining_exposure_20260910/record_membership.csv",
+      "bytes": 276638,
+      "sha256": "3802b9a1497c7ab22c313cd3591201995575e3da8d68bed032ff3355fba50e7c"
+    },
+    {
+      "path": "results/pretraining_exposure_20260910/report.md",
+      "bytes": 6490,
+      "sha256": "c9fce7a6ff344e803277cd17da219439849b38a517d2d73e1c267c5df09c5be8"
+    },
+    {
+      "path": "results/pretraining_exposure_20260910/source_manifest.json",
+      "bytes": 1433,
+      "sha256": "9dd0e317acf2ca4b4fed87b77b1202cd35cef34ddc5d6209953fde13384841ae"
+    },
+    {
+      "path": "scripts/audit_pretraining_exposure.py",
+      "bytes": 5073,
+      "sha256": "effd7274d6e9dffdaac4e5a2305290d9c444ff955c4e92e736223f2ccb4f966d"
+    },
+    {
+      "path": "scripts/prepare_ptbxl_metadata.py",
+      "bytes": 3324,
+      "sha256": "ffb15676d37779f96821e47a66a1941030e9c0e9006e61d44f20a44d6717e58d"
+    },
+    {
+      "path": "tests/test_pretraining_exposure.py",
+      "bytes": 1095,
+      "sha256": "4b72611f227802c3dbc3c9459aa0d89ac96bc8c8469cd8087364caef18a11b05"
+    }
+  ]
+}

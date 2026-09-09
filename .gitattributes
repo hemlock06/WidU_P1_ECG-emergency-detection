@@ -33,3 +33,7 @@ results/electrode_coverage_v1/artifact_manifest.json -text
 results/stage2_lineage/** -text
 scripts/audit_stage2_lineage.py -text
 tests/test_stage2_lineage.py -text
+results/pretraining_exposure_20260910/** -text
+scripts/audit_pretraining_exposure.py -text
+scripts/prepare_ptbxl_metadata.py -text
+tests/test_pretraining_exposure.py -text

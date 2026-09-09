@@ -131,3 +131,19 @@ Push remains held for final review.
 - `search_update.md` and `legacy_directory_inventory.json` supersede the pending
   historical-directory status: home host reported that directory absent23:57:25 KST.
   Further preparation must audit external-dataset exposure during backbone pretraining.
+
+## Published pretraining exposure audit, 2026-09-10
+
+- `results/pretraining_exposure_20260910/report.md`, `audit.json` and
+  `record_membership.csv`: original five-class test936 maps to published ECG-FM
+  train763/validation94/test79; binary test474 maps to380/51/42/unlisted1.
+  Self-supervised exposure is distinct from supervised label leakage. Previous
+  results are internal test-selected comparisons, not full-lifecycle unseen ECGs.
+- Official paper and the pinned split list include PTB-XL but exclude INCART/PTB.
+  The public Challenge's broader composition alone is insufficient evidence.
+- PTB-XL metadata preparation is explicitly provisional: current-version patient
+  filtering yields1685 records/1676 patients under numeric ID assumptions; deleted
+  old-version records and actual recording identity are not yet reconciled.
+  This is not an eligible independent cohort and no model outcomes were inspected.
+- New audit/preparation scripts, three passing schema tests, source fingerprints
+  and complete membership tables preserve the finding. Frozen results unchanged.
